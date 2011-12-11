@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/**
+ * @CSS for wordpress-basis-theme for xHTML5; working colors
+ * @version (0.1)
+ * @date (27.07.2009 14:07:04)
+ * @lastmodified (11.01.2010 12:35:38)
+ * @author (Frank Bueltge)
+ */
+
+header {
+background: #f6f908;
+}
+
+nav {
+background: #f95708;
+}
+
+section {
+background: #f4f4f4;
+}
+
+section#content {
+background: #daf0bb;
+}
+
+article, article article article {
+background: #bbf0ee;
+}
+
+article article {
+background: #ccc;
+}
+
+footer {
+background: #efbbf0;
+}

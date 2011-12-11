@@ -1,0 +1,83 @@
+h1 a {
+background: none;
+color: #333333;
+text-decoration: none;
+text-align: center;
+width: 99%;
+height: 99%;
+text-indent: 0;
+}
+
+.login {
+border-top-width: 0;
+}
+
+#login {
+width: 292px;
+margin: 7em auto;
+}
+
+#loginform, #lostpasswordform  {
+background-color: #fff;
+color: #333333;
+}
+
+#loginform .input, #lostpasswordform .input {
+}
+
+#loginform #wp-submit, #lostpasswordform #wp-submit {
+background-color: #fff !important;
+color: #333333;
+border: 1px solid #ebe9ed;
+-moz-border-radius: 0;
+-khtml-border-radius: 0;
+-webkit-border-radius: 0;
+}
+
+#loginform #wp-submit:hover, #lostpasswordform #wp-submit:hover {
+color: #910005;
+border-color: #333333;
+}
+
+#user_login, #user_pass, #user_email {
+font-size: 20px;
+width: 97%;
+padding: 3px;
+margin-right: 6px;
+border-width: 1px;
+border-style: solid;
+-moz-border-radius: 3px;
+-khtml-border-radius: 3px;
+-webkit-border-radius: 3px;
+}
+
+.forgotmenot {}
+
+#rememberme {}
+
+#nav {
+margin: 0 0 0 8px;
+padding: 16px;
+}
+
+#backtoblog {
+text-align: center;
+}
+
+#backtoblog a {
+position: relative;
+text-decoration: none;
+color: #777 !important;
+}
+
+#backtoblog a:hover {
+position: relative;
+text-decoration: none;
+color: #333333 !important;
+}
+
+#login_error, .message {
+margin: 0 0 16px 8px;
+border-width: 1px solid #333333;
+padding: 12px;
+}
