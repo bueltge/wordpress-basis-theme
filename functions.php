@@ -50,3 +50,5 @@ if ( ! $correct_php_version ) {
 require_once( 'core/setup.php' );
 require_once( 'core/comment.php' );
 
+require_once( 'admin/class-branding.php' );
+new Wp_Basis_Admin_Branding();
