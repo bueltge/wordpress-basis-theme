@@ -1,0 +1,3 @@
+@charset 'UTF-8';
+
+#dummy-element{width:2px;} /* Necessary to check if StyleSheet has loaded */
