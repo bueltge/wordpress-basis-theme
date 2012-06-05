@@ -8,6 +8,16 @@
  * @author   fb
  */
 
+/**
+ * Set namespace to encapsulating items
+ * @link     http://www.php.net/manual/en/language.namespaces.rationale.php
+ * 
+ * @since    05/08/2012  0.0.1
+ * @version  06/05/2012
+ * @author   fb
+ */
+namespace Wp_Basis\Admin_Branding;
+
 class Wp_Basis_Admin_Branding {
 	
 	/**
@@ -165,7 +175,7 @@ class Wp_Basis_Admin_Branding {
 		
 		$admin_bar->remove_node( 'wp-logo' );
 	}
-
+	
 	/**
 	 * Make a nice designer credit link
 	 *
@@ -186,4 +196,3 @@ class Wp_Basis_Admin_Branding {
 	}
 	
 } // end class
-

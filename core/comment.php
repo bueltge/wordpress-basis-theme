@@ -27,7 +27,7 @@ namespace Wp_Basis\Comment;
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
  * @since    05/08/2012  0.0.1
- * @version  05/08/2012
+ * @version  06/05/2012
  * @author   Automattic, fb
  */
 function get_comment( $comment, $args, $depth ) {
@@ -39,7 +39,7 @@ function get_comment( $comment, $args, $depth ) {
 		// Display trackbacks differently than normal comments.
 	?>
 	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		<p><?php _e( 'Pingback:', 'twentytwelve' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'wp_basis' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'wp_basis' ), '<span class="edit-link">', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -56,14 +56,14 @@ function get_comment( $comment, $args, $depth ) {
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
 						/* translators: 1: date, 2: time */
-						sprintf( __( '%1$s at %2$s', 'twentytwelve' ), get_comment_date(), get_comment_time() )
+						sprintf( __( '%1$s at %2$s', 'wp_basis' ), get_comment_date(), get_comment_time() )
 					);
 				?>
-				<?php edit_comment_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_comment_link( __( 'Edit', 'wp_basis' ), '<span class="edit-link">', '</span>' ); ?>
 			</header>
 
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'twentytwelve' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wp_basis' ); ?></p>
 			<?php endif; ?>
 
 			<section class="comment post-content">
@@ -71,7 +71,7 @@ function get_comment( $comment, $args, $depth ) {
 			</section>
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'twentytwelve' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'wp_basis' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 	<?php
