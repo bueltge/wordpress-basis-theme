@@ -11,7 +11,7 @@
 
 get_header();
 	
-	do_action( 'wp_basis_single_before_content' );
+	do_action( 'wp_basis_single_before' );
 	?>
 	
 	<div id="primary" class="site-content">
@@ -52,7 +52,7 @@ get_header();
 		</div> <?php // end #primary ?>
 	</div> <?php // end #content
 	
-	do_action( 'wp_basis_single_after_content' );
+	do_action( 'wp_basis_single_after' );
 	
 get_sidebar();
 get_footer();
