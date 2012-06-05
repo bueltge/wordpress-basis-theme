@@ -40,4 +40,6 @@
 				<h2><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
 		</header>
-	
+		
+		<div id="main">
+		

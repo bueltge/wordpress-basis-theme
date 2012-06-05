@@ -12,7 +12,12 @@
 get_header();
 	
 	do_action( 'wp_basis_single_before_content' );
+	?>
 	
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+			
+	<?php
 	// Whether current WordPress query has results to loop over
 	if ( have_posts() ) {
 	
@@ -42,6 +47,10 @@ get_header();
 		get_template_part( 'parts/no-results', 'index' );
 		
 	} // endif
+	?>
+	
+		</div> <?php // end #primary ?>
+	</div> <?php // end #content
 	
 	do_action( 'wp_basis_single_after_content' );
 	

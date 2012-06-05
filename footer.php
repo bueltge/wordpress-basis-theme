@@ -1,4 +1,6 @@
-	
+		
+		</div> <?php // end #main in header.php ?>
+		
 	</div> <?php // end #wrap in header.php ?>
 	
 		<footer>
