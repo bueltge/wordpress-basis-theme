@@ -47,8 +47,8 @@ if ( ! $correct_php_version ) {
 	exit;
 }
 
-require_once( 'core/setup.php' );
-require_once( 'core/comment.php' );
+require_once( 'inc/setup.php' );
+require_once( 'inc/comments/comment.php' );
 
-require_once( 'admin/class-branding.php' );
+require_once( 'inc/admin/class-branding.php' );
 new \Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding;

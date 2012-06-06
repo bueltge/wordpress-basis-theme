@@ -28,8 +28,9 @@ namespace Wp_Basis\Widgets;
 add_action( 'widgets_init', '\Wp_Basis\Widgets\widgets_init' );
 function widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', '_s' ),
+		'name'          => __( 'Sidebar', 'wp_basis' ),
 		'id'            => 'sidebar-1',
+		'description'   => __( 'The primary Sidebar', 'wp_basis' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => "</aside>",
 		'before_title'  => '<h1 class="widget-title">',

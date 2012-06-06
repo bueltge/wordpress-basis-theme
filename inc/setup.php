@@ -38,7 +38,7 @@ function wp_basis_setup() {
 	 * If you're building a theme based on Twenty Twelve, use a find and replace
 	 * to change 'wp_basis' to the name of your theme in all the template files.
 	 */
-	require_once( 'i18n.php' );
+	require_once( 'class-i18n.php' );
 	new \Wp_Basis\I18n\Wp_Basis_I18n;
 	
 }
