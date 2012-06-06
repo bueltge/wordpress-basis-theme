@@ -52,3 +52,11 @@ require_once( 'inc/comments/comment.php' );
 
 require_once( 'inc/admin/class-branding.php' );
 new \Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding;
+
+//add_filter( 'wp_basis_search_title', 'fb_test' );
+function fb_test( $args ) {
+	$args['tag'] = '';
+	var_dump($args);
+	return $args;
+}
+

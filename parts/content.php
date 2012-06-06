@@ -18,8 +18,15 @@
 	<div class="entry-content">
 			
 			<?php
-			the_content( the_title( '', '', FALSE ) . ' ' . __( 'read more &raquo;', 'wp_basis' ) );
-			wp_link_pages( array( 'before' => '<nav class="page-link">' . __( '<span>Pages:</span>', 'wp_basis' ), 'after' => '</nav>' ) );
+			the_content(
+				the_title( '', '', FALSE ) . ' ' . __( 'read more &raquo;', 'wp_basis' )
+			);
+			wp_link_pages(
+				array(
+					'before' => '<nav class="page-link">' . __( '<span>Pages:</span>', 'wp_basis' ),
+					'after' => '</nav>'
+				)
+			);
 			
 			do_action( 'wp_basis_content_after_content' );
 			?>
