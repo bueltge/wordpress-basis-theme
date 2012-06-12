@@ -1,6 +1,12 @@
 # WordPress Basis Theme
 Basis has been built to make theme development for WordPress easier. If you are an experienced theme developer or a total beginner, Basis provides a highly customizable starting point for your theme development and give your the typicly development with WordPress by use Hooks. Basis comes with a pre-defined set of templates, no styles or slyle-framework for pure development.  The theme is widget-ready and introduces a number of custom functions.
 
+## Descripton
+* The plugin have a lot of hooks, always startet with `wp_basis_`
+* also the next string is the string of the template `wp_basis_single_`
+* the next string on the hook logix is before or after an element, sometimes 'content' - `wp_basis_single_before_content`
+* the `functions.php` is current only for check the functions, include what you want; more solutions we will include it later; older solutions do you find in the `classes-old`
+
 ## Installation
 ### Requirements
 * WordPress (also Multisite) version 3.3 and later (tested at 3.4)
