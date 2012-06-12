@@ -4,7 +4,7 @@ Basis has been built to make theme development for WordPress easier. If you are 
 ## Descripton
 * The plugin have a lot of hooks, always startet with `wp_basis_`
 * also the next string is the string of the template `wp_basis_single_`
-* the next string on the hook logix is before or after an element, sometimes 'content' - `wp_basis_single_before_content`
+* the next string on the hook logic is 'before' or 'after' an element in the markup, sometimes 'content' - `wp_basis_single_before_content`
 * the `functions.php` is current only for check the functions, include what you want; more solutions we will include it later; older solutions do you find in the `classes-old`
 
 ## Installation
