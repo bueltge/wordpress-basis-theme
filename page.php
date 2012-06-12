@@ -1,17 +1,17 @@
 <?php
 /**
- * The Template for displaying all single posts
+ * The Template for displaying all pages.
  * 
  * @package    WP Basis
  * @subpackage 
- * @since      05/08/2012  0.0.1
- * @version    05/08/2012
+ * @since      06/06/2012  0.0.1
+ * @version    06/06/2012
  * @author     fb
  */
 
 get_header();
 	
-	do_action( 'wp_basis_single_before_content' );
+	do_action( 'wp_basis_page_before_content' );
 	?>
 	
 	<div id="primary" class="site-content">
@@ -21,18 +21,17 @@ get_header();
 	// Whether current WordPress query has results to loop over
 	if ( have_posts() ) {
 		
-		do_action( 'wp_basis_single_query_result' );
+		do_action( 'wp_basis_page_query_result' );
 		
 		/* Start the Loop */
 		while ( have_posts() ) : 
 			the_post();
 			
 			/**
-			 * Include the Post-Format-specific template for the content.
 			 * If you want to overload this in a child theme then include a file
-			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+			 * called content-page.php and that will be used instead.
 			 */
-			get_template_part( 'parts/content', get_post_format() );
+			get_template_part( 'parts/content', 'page' );
 			
 			// If comments are open or we have at least one comment, load up the comment template
 			if ( comments_open() || '0' != get_comments_number() )
@@ -45,9 +44,9 @@ get_header();
 		/**
 		 * Include the template for the loop dosn't find and result
 		 * If you will overwrite this in in a child theme the include a file
-		 * called no-results-single.php and that will be used instead.
+		 * called no-results-page.php and that will be used instead.
 		 */
-		get_template_part( 'parts/no-results', 'single' );
+		get_template_part( 'parts/no-results', 'page' );
 		
 	} // endif
 	?>
@@ -55,7 +54,7 @@ get_header();
 		</div> <?php // end #content ?>
 	</div> <?php // end #primary
 	
-	do_action( 'wp_basis_single_after_content' );
+	do_action( 'wp_basis_page_after_content' );
 	
 get_sidebar();
 get_footer();
