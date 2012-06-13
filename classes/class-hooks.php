@@ -56,7 +56,7 @@ class Wp_Basis_Hooks {
 	
 	public function get_index( $display ) {
 			
-		if ( ! $display )
+		if ( ! isset( $display ) )
 			$display = TRUE;
 		
 		if ( ( ! is_paged() ) && 
