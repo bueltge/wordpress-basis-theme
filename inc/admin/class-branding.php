@@ -57,7 +57,7 @@ class Wp_Basis_Admin_Branding {
 				'designer_url'    => 'http://bueltge.de',
 				'designer_anchor' => 'Frank Bültge',
 				'favicon_url'     => TRUE,
-				'remove_wp'       => FALSE
+				'remove_wp'       => TRUE
 			)
 		);
 
@@ -65,10 +65,10 @@ class Wp_Basis_Admin_Branding {
 		add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ) );
 		add_filter( 'login_headertitle', array( $this, 'login_headertitle' ) );
 		add_action( 'login_head',        array( $this, 'login_head' ) );
-		add_action( 'login_head',           array( $this, 'add_favicon' ) );
+		add_action( 'login_head',        array( $this, 'add_favicon' ) );
 		add_action( 'login_footer',      array( $this, 'login_footer' ) );
 		add_action( 'admin_head',        array( $this, 'add_favicon' ) );
-		//add_action( 'wp_head',           array( $this, 'add_favicon' ) );
+		//add_action( 'wp_head',         array( $this, 'add_favicon' ) );
 		add_action( 'admin_bar_menu',    array( $this, 'admin_bar_menu' ), 25 );
 	}
 
