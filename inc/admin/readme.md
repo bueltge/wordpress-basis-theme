@@ -9,6 +9,7 @@ A class to allow theme/plugin developers to easily brand the WordPress login and
 * Add a designer credit to the login page and admin footer
 * Remove the built in WordPress menu item from the admin menu bar
 * Add a favicon to the login, admin and front end of the site
+* Remove Gravatar icon in admin bar
 
 ## Usage
 
@@ -28,7 +29,8 @@ A class to allow theme/plugin developers to easily brand the WordPress login and
 				'designer_url'    => 'http://bueltge.de',
 				'designer_anchor' => 'Frank Bültge',
 				'favicon_url'     => TRUE,
-				'remove_wp'       => FALSE
+				'remove_wp'       => TRUE,
+				'remove_gravatar' => FALSE
 	) );
 ```
 
@@ -43,4 +45,4 @@ A class to allow theme/plugin developers to easily brand the WordPress login and
 * `designer_anchor` - Anchor text for the credit link.
 * `favicon_url`     - The favicon to be added on the login and admin pages and on the front end.
 * `remove_wp`       - Remove the WordPress drop down from the admin menu bar if set to true. The Default is false.
-
+* `remove_gravatar` - Remove Gravatar Icon on WordPress Admin Bar

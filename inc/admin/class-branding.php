@@ -8,16 +8,6 @@
  * @author   fb
  */
 
-/**
- * Set namespace to encapsulating items
- * @link     http://www.php.net/manual/en/language.namespaces.rationale.php
- * 
- * @since    05/08/2012  0.0.1
- * @version  06/05/2012
- * @author   fb
- */
-namespace Wp_Basis\Admin_Branding;
-
 class Wp_Basis_Admin_Branding {
 	
 	/**
@@ -41,6 +31,7 @@ class Wp_Basis_Admin_Branding {
 	 * `designer_anchor` - Anchor text for the credit link.
 	 * `favicon_url`     - The favicon to be added on the login and admin pages and on the front end.
 	 * `remove_wp`       - Remove the WordPress drop down from the admin menu bar if set to true. The Default is false.
+	 * `remove_gravatar` - Remove Gravatar Icon on WordPress Admin Bar
 	 *
 	 * @param array $args See above
 	 */
@@ -57,7 +48,8 @@ class Wp_Basis_Admin_Branding {
 				'designer_url'    => 'http://bueltge.de',
 				'designer_anchor' => 'Frank Bültge',
 				'favicon_url'     => TRUE,
-				'remove_wp'       => TRUE
+				'remove_wp'       => TRUE,
+				'remove_gravatar' => FALSE
 			)
 		);
 
@@ -70,6 +62,9 @@ class Wp_Basis_Admin_Branding {
 		add_action( 'admin_head',        array( $this, 'add_favicon' ) );
 		//add_action( 'wp_head',         array( $this, 'add_favicon' ) );
 		add_action( 'admin_bar_menu',    array( $this, 'admin_bar_menu' ), 25 );
+		// remove gravatar in admin bar
+		add_action( 'admin_bar_menu',    array( $this, 'add_gravatar_filter' ), 0 );
+		add_action( 'admin_bar_menu',    array( $this, 'remove_gravatar' ),    10 );
 	}
 
 	/**
@@ -177,22 +172,46 @@ class Wp_Basis_Admin_Branding {
 	}
 	
 	/**
+	 * Add filter to Remove Gravatar Icon in Admin Bar
+	 * 
+	 * @return  void
+	 */
+	public function add_gravatar_filter() {
+		
+		if ( ! $this->args['remove_gravatar'] )
+			return;
+		
+		add_filter( 'pre_option_show_avatars', '__return_zero' );
+	}
+	
+	/**
+	 * Remove Gravatar Icon in Admin Bar
+	 * 
+	 * @return  void
+	 */
+	public function remove_gravatar() {
+		
+		if ( ! $this->args['remove_gravatar'] )
+			return;
+		
+		add_filter( 'pre_option_show_avatars', '__return_zero' );
+	}
+	
+	/**
 	 * Make a nice designer credit link
 	 *
 	 * @access protected
 	 */
 	protected function designer_link() {
 		
-		$rv = '';
 		if ( $this->args['designer_url'] && $this->args['designer_anchor'] ) {
-			$rv = sprintf(
+			return sprintf(
 				'<a href="%1$s" title="%2$s" rel="external">%2$s</a>',
 				esc_url( $this->args['designer_url'] ),
 				esc_attr( $this->args['designer_anchor'] )
 			);
 		}
-		
-		return $rv;
+	
 	}
 	
 } // end class
