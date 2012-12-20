@@ -7,6 +7,8 @@
  * @version  05/31/2012
  * @author   fb
  */
+ 
+namespace Wp_Basis\Admin_Branding;
 
 class Wp_Basis_Admin_Branding {
 	
