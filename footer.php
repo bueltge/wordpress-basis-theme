@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-		
-		</div> <?php // end #main in header.php ?>
-		
-	</div> <?php // end #wrap in header.php ?>
-	
-		<footer>
-			<p>
-				<?php echo $wpdb->num_queries; ?>q, <?php timer_stop(1); ?>s
-			</p>
-		</footer>
-	
-	<?php wp_footer(); ?>
-	
-	</body>
-=======
 <?php
 /**
  * The Template for displaying the footer.
@@ -41,5 +25,4 @@
 	<?php wp_footer(); ?>
 	
 	</body>
->>>>>>> f6078bf476e869d5ed64a2256eb41337cdc64f4c
 </html>
