@@ -107,9 +107,9 @@ class Wp_Basis_Admin_Branding {
 				$this->args['login_height'],
 				$this->args['login_width']
 			);
+		} else {
+			echo "\t" . '.login h1 a { background-image: none; line-height: 1; text-indent: 0; text-align: right; height: auto; width: auto; }';
 		}
-		
-		echo "\t" . '.login h1 a { background-image: none; line-height: 1; text-indent: 0; text-align: right; height: auto; width: auto; }';
 		echo "\t" . '.custom-login-branding { position: absolute; right: 5px; bottom: 5px; text-align: right; }';
 		echo "\t</style>\n";
 	}
