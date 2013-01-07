@@ -7,7 +7,8 @@
  * @version  01/07/2013
  * @author   fb
  */
- 
+
+// @see  Using namespaces: Aliasing/Importing  http://php.net/manual/en/language.namespaces.importing.php
 namespace Wp_Basis\Admin_Branding;
 
 class Wp_Basis_Admin_Branding {
