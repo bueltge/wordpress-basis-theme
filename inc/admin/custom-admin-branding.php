@@ -17,7 +17,7 @@ require_once( trailingslashit( dirname( __FILE__ ) ) . 'class-branding.php' );
 
 // Create a new instance of the `Wp_Basis_Admin_Branding` class
 // Pass in whatever values you want (see the "Arguments" section below)
-new Wp_Basis_Admin_Branding( array( 
+new \Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding( array( 
 			'login_url'       => home_url( '/' ),
 			'login_image'     => FALSE,
 			'login_title'     => get_bloginfo( 'name', 'display' ),
