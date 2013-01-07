@@ -4,7 +4,7 @@
  * 
  * @package  WP Basis
  * @since    05/31/2012  0.0.1
- * @version  05/31/2012
+ * @version  01/07/2013
  * @author   fb
  */
  
@@ -34,6 +34,7 @@ class Wp_Basis_Admin_Branding {
 	 * `favicon_url`     - The favicon to be added on the login and admin pages and on the front end.
 	 * `remove_wp`       - Remove the WordPress drop down from the admin menu bar if set to true. The Default is false.
 	 * `remove_gravatar` - Remove Gravatar Icon on WordPress Admin Bar
+	 * `login_style`     - URL to your custom style
 	 *
 	 * @param array $args See above
 	 */
@@ -51,22 +52,24 @@ class Wp_Basis_Admin_Branding {
 				'designer_anchor' => 'Frank Bültge',
 				'favicon_url'     => TRUE,
 				'remove_wp'       => TRUE,
-				'remove_gravatar' => FALSE
+				'remove_gravatar' => FALSE,
+				'login_style'     => FALSE
 			)
 		);
-
-		add_filter( 'login_headerurl',   array( $this, 'login_headerurl' ) );
-		add_filter( 'admin_footer_text', array( $this, 'admin_footer_text' ) );
-		add_filter( 'login_headertitle', array( $this, 'login_headertitle' ) );
-		add_action( 'login_head',        array( $this, 'login_head' ) );
-		add_action( 'login_head',        array( $this, 'add_favicon' ) );
-		add_action( 'login_footer',      array( $this, 'login_footer' ) );
-		add_action( 'admin_head',        array( $this, 'add_favicon' ) );
-		//add_action( 'wp_head',         array( $this, 'add_favicon' ) );
-		add_action( 'admin_bar_menu',    array( $this, 'admin_bar_menu' ), 25 );
+		
+		add_filter( 'login_headerurl',    array( $this, 'login_headerurl' ) );
+		add_filter( 'admin_footer_text',  array( $this, 'admin_footer_text' ) );
+		add_filter( 'login_headertitle',  array( $this, 'login_headertitle' ) );
+		add_action( 'login_head',         array( $this, 'login_head' ) );
+		add_action( 'login_enqueue_scripts', array( $this, 'add_stylesheet' ) );
+		add_action( 'login_head',         array( $this, 'add_favicon' ) );
+		add_action( 'login_footer',       array( $this, 'login_footer' ) );
+		add_action( 'admin_head',         array( $this, 'add_favicon' ) );
+		//add_action( 'wp_head',          array( $this, 'add_favicon' ) );
+		add_action( 'admin_bar_menu',     array( $this, 'admin_bar_menu' ), 25 );
 		// remove gravatar in admin bar
-		add_action( 'admin_bar_menu',    array( $this, 'add_gravatar_filter' ), 0 );
-		add_action( 'admin_bar_menu',    array( $this, 'remove_gravatar' ),    10 );
+		add_action( 'admin_bar_menu',     array( $this, 'add_gravatar_filter' ), 0 );
+		add_action( 'admin_bar_menu',     array( $this, 'remove_gravatar' ),    10 );
 	}
 
 	/**
@@ -113,7 +116,23 @@ class Wp_Basis_Admin_Branding {
 		echo "\t" . '.custom-login-branding { position: absolute; right: 5px; bottom: 5px; text-align: right; }';
 		echo "\t</style>\n";
 	}
-
+	
+	/**
+	 * Add custom stylesheet file from param
+	 * 
+	 * @param  String $url
+	 * @return void
+	 */
+	public function add_stylesheet() {
+		
+		if ( ! $this->args['login_style'] )
+			return NULL;
+		
+		$style = esc_url( $this->args['login_style'] );
+		
+		echo '<link rel="stylesheet" id="custom_admin_style"  href="' . $style . '" type="text/css" media="all" />';
+	}
+	
 	/**
 	 * Adds the favicon specified in the $args
 	 *
