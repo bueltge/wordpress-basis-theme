@@ -16,7 +16,7 @@ get_header();
 	
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-			
+		
 	<?php
 	// Whether current WordPress query has results to loop over
 	if ( have_posts() ) {

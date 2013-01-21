@@ -29,15 +29,6 @@
  * @author   fb
  */
 
-/**
- * Set the content width in pixels based on the theme's design and stylesheet.
- * Also the width of oEmbed objects to scale specific size
- *
- * @since 05/08/2012  0.0.1
- */
-if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
-
 // check for right php version
 $correct_php_version = version_compare( phpversion(), '5.3.0', '>=' );
 
@@ -47,16 +38,21 @@ if ( ! $correct_php_version ) {
 	exit;
 }
 
+/**
+ * Set the content width in pixels based on the theme's design and stylesheet.
+ * Also the width of oEmbed objects to scale specific size
+ *
+ * @since 05/08/2012  0.0.1
+ */
+if ( ! isset( $content_width ) )
+	$content_width = 640; /* pixels */
+
+// inc Custom setup
 require_once( 'inc/setup.php' );
+// inc Custom functions for comments
 require_once( 'inc/comments/comment.php' );
 
+// inc Login and Admin Bar Branding
 require_once( 'inc/admin/class-branding.php' );
 new \Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding;
-
-//add_filter( 'wp_basis_search_title', 'fb_test' );
-function fb_test( $args ) {
-	$args['tag'] = '';
-	var_dump($args);
-	return $args;
-}
 

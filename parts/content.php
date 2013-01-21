@@ -10,7 +10,19 @@
  */
 ?>
 
+<?php
+/**
+ * The <article> element can be used to enclose content 
+ * that still makes sense on its own and is therefore "reusable"
+ */
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php
+	/**
+	 * A <header> element is required 
+	 * here is the heading contains often a <h1> element in Loop
+	 */
+	?>
 	<header>
 		<h1><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 	</header>
