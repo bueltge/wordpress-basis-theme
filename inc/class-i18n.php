@@ -4,7 +4,7 @@
  * 
  * @package  WP Basis
  * @since    05/08/2012  0.0.1
- * @version  05/05/2012
+ * @version  01/21/2013
  * @author   fb
  */
 
@@ -18,7 +18,7 @@
  */
 namespace Wp_Basis\I18n;
 
-class Wp_Basis_I18n {
+class I18n {
 	
 	protected $text_domain;
 	

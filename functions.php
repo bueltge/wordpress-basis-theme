@@ -25,7 +25,7 @@
  * 
  * @package  WP Basis
  * @since    05/08/2012  0.0.1
- * @version  05/08/2012
+ * @version  01/21/2013
  * @author   fb
  */
 
@@ -49,10 +49,3 @@ if ( ! isset( $content_width ) )
 
 // inc Custom setup
 require_once( 'inc/setup.php' );
-// inc Custom functions for comments
-require_once( 'inc/comments/comment.php' );
-
-// inc Login and Admin Bar Branding
-require_once( 'inc/admin/class-branding.php' );
-new \Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding;
-

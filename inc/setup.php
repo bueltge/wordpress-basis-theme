@@ -29,8 +29,8 @@ namespace Wp_Basis\Setup;
  * @version  06/05/2012
  * @author   fb
  */
-add_action( 'after_setup_theme', '\Wp_Basis\Setup\wp_basis_setup' );
-function wp_basis_setup() {
+add_action( 'after_setup_theme', '\Wp_Basis\Setup\setup' );
+function setup() {
 	
 	/**
 	 * Make the theme available for translation.
@@ -39,6 +39,36 @@ function wp_basis_setup() {
 	 * to change 'wp_basis' to the name of your theme in all the template files.
 	 */
 	require_once( 'class-i18n.php' );
-	new \Wp_Basis\I18n\Wp_Basis_I18n;
+	new \Wp_Basis\I18n\I18n;
 	
+	/**
+	 * Allow to easily brand the WordPress login and admin screens
+	 */
+	require_once( 'admin/class-branding.php' );
+	new \Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding;
+	
+	/**
+	 * Custom functions for comments
+	 * See the documentation inside the file for more inforamtion and possibilities
+	 */
+	require_once( 'comments/comment.php' );
+	
+	/**
+	 * Add default posts and comments RSS feed links to head
+	 */
+	add_theme_support( 'automatic-feed-links' );
+}
+
+add_action( 'wp_enqueue_scripts', '\Wp_Basis\Setup\scripts' );
+function scripts() {
+	
+	// set suffix for debug mode
+	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.dev' : '';
+	
+	// load stylesheet inside the css folder
+	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/style' . $suffix . '.css' );
+	
+	// load comment reply script, if comments open, if thread comments are active and also on single view
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+		wp_enqueue_script( 'comment-reply' );
 }
