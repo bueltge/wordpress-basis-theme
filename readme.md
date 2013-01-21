@@ -2,15 +2,16 @@
 Basis provides a highly customizable starting point for your theme development
 
 ## Descripton
-Basis has been built to make theme development for WordPress easier. If you are an experienced theme developer or a total beginner, Basis provides a highly customizable starting point for your theme development and give your the typicly development with WordPress by use Hooks. Basis comes with a pre-defined set of templates, no styles or slyle-framework for pure development.  The theme is widget-ready and introduces a number of custom functions.
+Basis has been built to make theme development for WordPress easier. If you are an experienced theme developer or a total beginner, Basis provides a highly customizable starting point for your theme development and give your the typicly development with WordPress by use Hooks. Basis comes with a pre-defined set of templates, no styles or style-framework for pure development. The theme is widget-ready and introduces a number of custom functions.
 
 Basis has an long tradition, development and maintenance since 2007 - see on the [project page](http://wpbasis.de). 
-The new version with the codename `namespace` ;) is not ready, but usable.
+The new version with the codename `namespace` ;) is usable, but changed in the course of time.
 
 * The plugin have a lot of hooks, always startet with `wp_basis_`
-* also the next string is the string of the template `wp_basis_single_`
-* the next string on the hook logic is 'before' or 'after' an element in the markup, sometimes 'content' - `wp_basis_single_before_content`
-* the `functions.php` is current only for check the functions, include what you want; more solutions we will include it later; older solutions do you find in the `classes-old`
+  * also the next string is the string of the template `wp_basis_single_`
+  * the next string on the hook logic is 'before' or 'after' an element in the markup, sometimes 'content' - `wp_basis_single_before_content`
+* the `functions.php` is current only for check the functions, include a minimium from the often used defaults;
+  * older solutions do you find in the `classes-old` in branch `stacker`
 
 ## Installation
 ### Requirements
