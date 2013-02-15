@@ -131,7 +131,7 @@ class Wp_Basis_Admin_Branding {
 		
 		$style = esc_url( $this->args['login_style'] );
 		
-		echo '<link rel="stylesheet" id="custom_admin_style"  href="' . $style . '" type="text/css" media="all" />';
+		wp_enqueue_style( 'wp-basis-login-branding', $style, FALSE, '02-15-2013', 'screen' );
 	}
 	
 	/**
