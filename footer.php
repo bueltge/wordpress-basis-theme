@@ -32,6 +32,5 @@
 	</div> <?php // end #wrap in header.php ?>
 	
 	<?php wp_footer(); ?>
-	
 	</body>
 </html>
