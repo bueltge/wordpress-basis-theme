@@ -19,6 +19,15 @@
 namespace Wp_Basis\Setup;
 
 /**
+ * Set the content width in pixels based on the theme's design and stylesheet.
+ * Also the width of oEmbed objects to scale specific size
+ *
+ * @since 05/08/2012  0.0.1
+ */
+if ( ! isset( $content_width ) )
+	$content_width = 640; /* pixels */
+
+/**
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the after_setup_theme hook, which runs
@@ -38,7 +47,6 @@ function setup() {
 	 * If you're building a theme based on Twenty Twelve, use a find and replace
 	 * to change 'wp_basis' to the name of your theme in all the template files.
 	 */
-	require_once( 'class-i18n.php' );
 	new \Wp_Basis\I18n\I18n;
 	
 	/**

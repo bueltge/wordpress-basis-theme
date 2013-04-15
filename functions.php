@@ -39,13 +39,17 @@ if ( ! $correct_php_version ) {
 }
 
 /**
- * Set the content width in pixels based on the theme's design and stylesheet.
- * Also the width of oEmbed objects to scale specific size
- *
- * @since 05/08/2012  0.0.1
+ * Autoload all files from folder inc
+ * Current no subdirectories
+ * 
+ * @since   04/15/2013
+ * @return  void
  */
-if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+function wp_basis_load_files() {
+	
+	// load required classes
+	foreach( glob( dirname( __FILE__ ) . '/inc/*.php' ) as $path ) 
+		require_once $path;
+}
+wp_basis_load_files();
 
-// inc Custom setup
-require_once( 'inc/setup.php' );
