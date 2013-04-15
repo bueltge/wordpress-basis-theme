@@ -36,6 +36,11 @@
 				the_title( '', '', FALSE ) . ' ' . __( 'read more &raquo;', 'wp_basis' )
 			);
 			
+			/**
+			 * Pick only the first image
+			 * 
+			 * @see   http://wpengineer.com/1735/easier-better-solutions-to-get-pictures-on-your-posts/
+			 */
 			$attachments =& get_children( array(
 				'post_parent'    => get_the_ID(),
 				'post_type'      => 'attachment',
@@ -43,8 +48,9 @@
 				'order'          => 'ASC',
 				'numberposts'    => 1 
 			) );
-			
+			// If attachment, then loop about this array
 			if ( ! empty( $attachments ) ) {
+				// get the ID of the attachment and get all data
 				foreach ( $attachments as $attachment_id => $attachment ) {
 					$attachment  = get_post( $attachment_id );
 					$alt         = get_post_meta( $attachment->ID, '_wp_attachment_image_alt', TRUE );
