@@ -44,7 +44,7 @@ Grunt will watch all JavaScript and CSS files within the `assets` folder. If a f
 Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog.
 
 ### Contact & Feedback
-The plugin is designed and developed current by me ([Frank BÃ¼ltge](http://bueltge.de))
+The plugin is designed and developed current by me ([Frank Bültge](http://bueltge.de))
 
 Please let me know if you like the plugin or you hate it or whatever ... Please fork it, add an issue for ideas and bugs.
 
