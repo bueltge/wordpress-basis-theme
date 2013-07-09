@@ -74,7 +74,7 @@ function scripts() {
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.dev' : '';
 	
 	// load stylesheet inside the css folder
-	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/style' . $suffix . '.css' );
+	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/assets/css/style' . $suffix . '.css' );
 	
 	// load comment reply script, if comments open, if thread comments are active and also on single view
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
