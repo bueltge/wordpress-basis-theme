@@ -1,0 +1,28 @@
+/**
+ * Custom Login Style
+ * 
+ * @since  01/07/2012
+ */
+
+body.login { background-color: #990000; }
+
+body.login div#login {}
+body.login div#login h1 {}
+
+body.login div#login h1 a { color: #f4f4f4; text-decoration: none; }
+
+body.login div#login form#loginform {}
+body.login div#login form#loginform p {}
+body.login div#login form#loginform p label {}
+body.login div#login form#loginform input {}
+body.login div#login form#loginform input#user_login {}
+body.login div#login form#loginform input#user_pass {}
+body.login div#login form#loginform p.forgetmenot {}
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+body.login div#login form#loginform p.submit {}
+body.login div#login form#loginform p.submit input#wp-submit {}
+body.login div#login p#nav {}
+
+body.login div#login p#nav a { text-shadow: none; color: #f4f4f4 !important; text-decoration: none; }
+body.login div#login p#backtoblog { text-shadow: none; color: #f4f4f4 !important; text-decoration: none; }
+body.login div#login p#backtoblog a { text-shadow: none; color: #f4f4f4 !important; text-decoration: none; }
