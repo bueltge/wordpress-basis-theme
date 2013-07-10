@@ -14,7 +14,7 @@ A class to allow theme/plugin developers to easily brand the WordPress login and
 
 ## Usage
 
-```
+```php
 	<?php
 	// somewhere in `functions.php`
 	require_once( trailingslashit( dirname( __FILE__ ) ) . 'class-branding.php' );
@@ -55,7 +55,7 @@ A class to allow theme/plugin developers to easily brand the WordPress login and
 You can also use the class as plugin. Create a custom plugin or use the file `custom-admin-branding.php` inside this folder and set the parametes for your requirements.
 The example plugin have also a small function to hide the update check for this plugin.
 
-```
+```php
 <?php
 /**
  * Plugin Name: Custom Admin Branding
