@@ -1,47 +1,62 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Basis_Theme xHTML5
+ * @subpackage WP-Basis Theme
+ * @template sidebar template
+ * @since 0.0.1
  */
+if ( get_theme_support( 'show_sidebar-1' ) && 'on' != get_theme_mod( 'show_sidebar-1' ) )
+	return;
 ?>
 
-	<aside id="sidebar">
-		<h3><?php _e('Sidebar', FB_BASIS_TEXTDOMAIN); ?></h3>
+	<?php
+	/*
+	 * An <aside> is used to enclose content that is additional to the main content 
+	 * but not essential. If it were removed, the meaning of the main content should not be lost, 
+	 * but the content of the <aside> also retains its meaning.
+	 * NOTE: the aside is placed outside of the <main> element as while its content 
+	 * is related to the content that is within the <main> element, it is not part of it
+	 * ARIA: the landmark role "complementary" is added here as it contains supporting 
+	 * information for the main content that remains meaningful even when separated from it 
+	 */
+	?>
+	<aside id="sidebar" role="complementary">
+		<?php
+		/**
+		 * A <header> element is not required 
+		 * here as the heading only contains a single <h1> element
+		 */
+		?>
+		<h1><?php _e('Sidebar', 'wp_basis'); ?></h1>
 		<nav>
-			<h3><?php _e('Navigation', FB_BASIS_TEXTDOMAIN); ?></h3>
+			<h2><?php _e('Navigation', 'wp_basis'); ?></h2>
 			<ul>
 				
 				<?php
-					/* Widgetized sidebar, if you have the plugin installed. */
-					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
-				<li id="search">
-					<?php get_search_form(); ?>
-				</li>
+				/* Widgetized sidebar, if you have the plugin installed. */
+				if ( ! dynamic_sidebar() ) : ?>
 				
-				<?php if ( function_exists('wp_page_menu') ) { // erst ab wp 2.7
-					echo '<li>';
-					wp_page_menu('show_home=1&menu_class=page-navi&title_li=');
-					echo '</li>';
-				} else {
-					wp_list_pages('title_li=<h3>' . __('Seiten', FB_BASIS_TEXTDOMAIN) . '</h3>');
-				} ?>
-		
-				<li><h3><?php _e('Beitr&auml;ge', FB_BASIS_TEXTDOMAIN) ?></h3>
+				<li id="posts" class="widget">
+					<h3 class="widget-title"><?php _e('Last Posts', 'wp_basis') ?></h3>
 					<ul>
-					<?php wp_get_archives('type=postbypost&limit=10'); ?>
-					</ul>
-				</li>
-			
-				<?php if (is_archive()) { ?>
-				<li><h3><?php _e('Archiv', FB_BASIS_TEXTDOMAIN); ?></h3>
-					<ul>
-					<?php wp_get_archives('type=monthly&show_post_count=1'); ?>
+						<?php wp_get_archives('type=postbypost&limit=10'); ?>
 					</ul>
 				</li>
 				
-				<?php }
+				<li id="meta" class="widget">
+					<h3 class="widget-title"><?php _e( 'Meta', 'wp_basis' ); ?></h1>
+					<ul>
+						<?php wp_register(); ?>
+						<li><?php wp_loginout(); ?></li>
+						<?php wp_meta(); ?>
+					</ul>
+				</li>
+				
+				<?php
 				endif; // End Widgets
 				?>
 			</ul>
 		</nav>
+		
 	</aside>
+
