@@ -18,6 +18,9 @@ The new version with the codename `namespace` ;) is usable, but changed in the c
 * WordPress (also Multisite) version 3.3 and later (tested at 3.4)
 * PHP 5.3 (use PHP namespaces)
 
+## Child Theme Usage
+See the repository for a [starter kit](https://github.com/bueltge/WordPress-Basis-Theme-Child-Starter), a example.
+
 ## Grunt usage
 ### What is Grunt?
 Grunt is a JavaScript task runner. For a detailed description see [Grunt.js homepage](http://gruntjs.com/).
