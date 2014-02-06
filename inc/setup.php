@@ -38,7 +38,7 @@ if ( ! isset( $content_width ) )
  * @version  06/05/2012
  * @author   fb
  */
-add_action( 'after_setup_theme', '\Wp_Basis\Setup\setup' );
+\add_action( 'after_setup_theme', '\Wp_Basis\Setup\setup' );
 function setup() {
 	
 	/**
@@ -64,10 +64,10 @@ function setup() {
 	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
-	add_theme_support( 'automatic-feed-links' );
+	\add_theme_support( 'automatic-feed-links' );
 }
 
-add_action( 'wp_enqueue_scripts', '\Wp_Basis\Setup\scripts' );
+\add_action( 'wp_enqueue_scripts', '\Wp_Basis\Setup\scripts' );
 function scripts() {
 	
 	// set suffix for debug mode

@@ -38,18 +38,39 @@ if ( ! $correct_php_version ) {
 	exit;
 }
 
-/**
- * Autoload all files from folder inc
- * Current no subdirectories
- * 
- * @since   04/15/2013
- * @return  void
- */
-function wp_basis_load_files() {
+if ( ! function_exists( 'wp_basis_load_files' ) ) {
 	
-	// load required classes
-	foreach( glob( dirname( __FILE__ ) . '/inc/*.php' ) as $path ) 
-		require_once $path;
+	add_action( 'after_setup_theme', 'wp_basis_load_files' );
+	
+	/**
+	 * Autoload all files from folder inc
+	 * Current no subdirectories
+	 * 
+	 * @since   04/15/2013
+	 * @return  void
+	 */
+	function wp_basis_load_files() {
+		
+		$inc_directory = 'inc';
+		$inc_base = dirname( __FILE__ ) . '/' . $inc_directory . '/';
+		$includes = array();
+		
+		// load required classes
+		foreach( glob( $inc_base . '*.php' ) as $path ) {
+			
+			$key = substr( $path, strpos( $path, $inc_directory ) );
+			$key = str_replace( $inc_directory . '/', '', $key );
+			// create array with key and path for use in hook
+			$includes[ $key ] = $path;
+		}
+		
+		$includes = apply_filters(
+			'wp_basis_loader',
+			$includes
+		);
+		
+		foreach ( $includes as $key => $path )
+			require_once $path;
+		
+	}
 }
-wp_basis_load_files();
-
