@@ -4,7 +4,7 @@
  * 
  * @package  WP Basis
  * @since    05/08/2012  0.0.1
- * @version  06/05/2012
+ * @version  04/29/2014
  * @author   fb
  */
 
@@ -35,7 +35,7 @@ if ( ! isset( $content_width ) )
  * support post thumbnails.
  * 
  * @since    05/08/2012  0.0.1
- * @version  06/05/2012
+ * @version  04/29/2014
  * @author   fb
  */
 \add_action( 'after_setup_theme', '\Wp_Basis\Setup\setup' );
@@ -71,7 +71,7 @@ function setup() {
 function scripts() {
 	
 	// set suffix for debug mode
-	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.dev' : '';
+	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	
 	// load stylesheet inside the css folder
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/assets/css/style' . $suffix . '.css' );
