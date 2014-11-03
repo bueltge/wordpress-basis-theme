@@ -22,6 +22,10 @@ See the repository for a [starter kit](https://github.com/bueltge/wordpress-basi
 * PHP 5.3 (use PHP namespaces)
 
 ### Composer Usage
+#### What is Composer?
+Composer is a dependency manager for PHP. Composer will manage the dependencies you require on a project by project basis. This means that Composer will pull in all the required libraries, dependencies and manage them all in one place. For a detailed description see [Composer  Site](https://getcomposer.org/).
+
+#### Installation
 The plugin is available as Composer package and can be installed via Composer:
 ```shell
 composer create-project bueltge/wordpress-basis-theme --no-dev`.
