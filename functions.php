@@ -22,11 +22,15 @@
  *
  * For more information on hooks, actions, and filters, see 
  * @link     http://codex.wordpress.org/Plugin_API.
- * 
- * @package  WP Basis
- * @since    05/08/2012  0.0.1
- * @version  01/21/2013
- * @author   fb
+ *
+ * Php Version 5.3
+ *
+ * @package    WordPress
+ * @subpackage WordPress_Basis_Theme
+ * @since      2012-05-08  0.0.1
+ * @version    2014-11-03
+ * @author     Frank Bültge <frank@bueltge.de>
+ * @license    http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 
 // check for right php version
@@ -43,10 +47,10 @@ if ( ! function_exists( 'wp_basis_load_files' ) ) {
 	add_action( 'after_setup_theme', 'wp_basis_load_files' );
 	
 	/**
-	 * Autoload all files from folder inc
+	 * Automatic load all files from folder inc
 	 * Current no subdirectories
 	 * 
-	 * @since   04/15/2013
+	 * @since   2013-04-15
 	 * @return  void
 	 */
 	function wp_basis_load_files() {

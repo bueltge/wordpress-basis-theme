@@ -1,20 +1,21 @@
 <?php
 /**
  * Core functions for WP Basis
- * 
- * @package  WP Basis
- * @since    05/08/2012  0.0.1
- * @version  05/08/2012
- * @author   fb
+ *
+ * @package    WordPress
+ * @subpackage WordPress_Basis_Theme
+ * @since      2012-05-08  0.0.1
+ * @version    2012-05-08
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 
 /**
  * Set namespace to encapsulating items
- * @link     http://www.php.net/manual/en/language.namespaces.rationale.php
+ * @link       http://www.php.net/manual/en/language.namespaces.rationale.php
  * 
- * @since    05/08/2012  0.0.1
- * @version  05/08/2012
- * @author   fb
+ * @since      2012-05-08  0.0.1
+ * @version    2012-05-08
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 namespace Wp_Basis\Core;
 

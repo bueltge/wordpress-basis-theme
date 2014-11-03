@@ -5,7 +5,7 @@
  * @package  WP Basis
  * @since    06/05/2012  0.0.1
  * @version  06/05/2012
- * @author   fb
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 
 /**
@@ -14,7 +14,7 @@
  * 
  * @since    06/05/2012  0.0.1
  * @version  06/05/2012
- * @author   fb
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 namespace Wp_Basis\Widgets;
 
@@ -23,7 +23,7 @@ namespace Wp_Basis\Widgets;
  *
  * @since    06/05/2012  0.0.1
  * @version  06/05/2012
- * @author   fb
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 add_action( 'widgets_init', '\Wp_Basis\Widgets\widgets_init' );
 function widgets_init() {

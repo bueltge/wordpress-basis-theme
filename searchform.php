@@ -3,9 +3,9 @@
  * The template for displaying search forms
  * 
  * @package  WP Basis
- * @since    05/08/2012  0.0.1
+ * @since      2012-05-08  0.0.1
  * @version  06/05/2012
- * @author   fb
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 ?>
 

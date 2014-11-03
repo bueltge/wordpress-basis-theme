@@ -1,12 +1,12 @@
 <?php
 /**
  * The Header for our WP Basis theme
- * 
- * @package    WP Basis
- * @subpackage 
- * @since      05/08/2012  0.0.1
- * @version    01/21/2013
- * @author     fb
+ *
+ * @package    WordPress
+ * @subpackage WordPress_Basis_Theme
+ * @since      2012-05-08  0.0.1
+ * @version    2014-11-03
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 ?>
 <!DOCTYPE html>
@@ -16,13 +16,12 @@
 <!--[if IE 9 ]>    <html <?php language_attributes(); ?> class="no-js ie9"> <![endif]--> 
 <!--[if (gt IE 9)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js" manifest="cache-manifest.manifest"><!--<![endif]--> 
 	
-	<head profile="http://gmpg.org/xfn/11">
+	<head>
 		
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-		
-		<title><?php wp_title( '-' ); ?></title>
-		
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		
 		<?php wp_head(); ?>
 	</head>

@@ -1,11 +1,12 @@
 <?php
 /**
  * Custom admin and login branding for WordPress
- * 
- * @package  WP Basis
- * @since    05/31/2012  0.0.1
- * @version  01/07/2013
- * @author   fb
+ *
+ * @package    WordPress
+ * @subpackage WordPress_Basis_Theme
+ * @since      05/31/2012  0.0.1
+ * @version    01/07/2013
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 
 // @see  Using namespaces: Aliasing/Importing  http://php.net/manual/en/language.namespaces.importing.php

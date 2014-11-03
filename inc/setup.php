@@ -1,20 +1,21 @@
 <?php
 /**
  * Setup and initialization of theme functions and definitions
- * 
- * @package  WP Basis
- * @since    05/08/2012  0.0.1
- * @version  04/29/2014
- * @author   fb
+ *
+ * @package    WordPress
+ * @subpackage WordPress_Basis_Theme
+ * @since      2012-05-08  0.0.1
+ * @version    2014-11-03
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 
 /**
  * Set namespace to encapsulating items
- * @link     http://www.php.net/manual/en/language.namespaces.rationale.php
+ * @link       http://www.php.net/manual/en/language.namespaces.rationale.php
  * 
- * @since    05/08/2012  0.0.1
- * @version  05/08/2012
- * @author   fb
+ * @since      2012-05-08  0.0.1
+ * @version    2012-05-08
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 namespace Wp_Basis\Setup;
 
@@ -22,7 +23,7 @@ namespace Wp_Basis\Setup;
  * Set the content width in pixels based on the theme's design and stylesheet.
  * Also the width of oEmbed objects to scale specific size
  *
- * @since 05/08/2012  0.0.1
+ * @since    2012-05-08  0.0.1
  */
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
@@ -34,9 +35,9 @@ if ( ! isset( $content_width ) )
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  * 
- * @since    05/08/2012  0.0.1
- * @version  04/29/2014
- * @author   fb
+ * @since      2012-05-08  0.0.1
+ * @version    2014-04-29
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 \add_action( 'after_setup_theme', '\Wp_Basis\Setup\setup' );
 function setup() {
@@ -60,7 +61,19 @@ function setup() {
 	 * See the documentation inside the file for more inforamtion and possibilities
 	 */
 	require_once( 'comments/comment.php' );
-	
+
+	/**
+	 * Let WordPress manage the document title.
+	 * By adding theme support, we declare that this theme does not use a
+	 * hard-coded <title> tag in the document head, and expect WordPress to
+	 * provide it for us.
+	 * Usable since WordPress Version 4.1
+	 *
+	 * @see   https://github.com/bueltge/wordpress-basis-theme/issues/8
+	 * @since 2014-11-03
+	 */
+	\add_theme_support( 'title-tag' );
+
 	/**
 	 * Add default posts and comments RSS feed links to head
 	 */

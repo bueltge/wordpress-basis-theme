@@ -1,5 +1,5 @@
 # WordPress Basis Theme
-Basis provides a highly customizable starting point for your theme development
+Basis provides a highly customizable starting point for your theme development.
 
 ## Description
 Basis has been built to make theme development for WordPress easier. If you are an experienced theme developer or a total beginner, Basis provides a highly customizable starting point for your theme development and give your the typically development with WordPress by use Hooks. Basis comes with a pre-defined set of templates, no styles or style-framework for pure development. The theme is widget-ready and introduces a number of custom functions.

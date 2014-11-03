@@ -3,18 +3,18 @@
  * Custom functions for translation
  * 
  * @package  WP Basis
- * @since    05/08/2012  0.0.1
+ * @since      2012-05-08  0.0.1
  * @version  01/21/2013
- * @author   fb
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 
 /**
  * Set namespace to encapsulating items
  * @link     http://www.php.net/manual/en/language.namespaces.rationale.php
  * 
- * @since    05/08/2012  0.0.1
+ * @since      2012-05-08  0.0.1
  * @version  05/08/2012
- * @author   fb
+ * @author     Frank Bültge <frank@bueltge.de>
  */
 namespace Wp_Basis\I18n;
 
