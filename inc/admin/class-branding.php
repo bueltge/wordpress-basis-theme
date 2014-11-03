@@ -4,8 +4,8 @@
  *
  * @package    WordPress
  * @subpackage WordPress_Basis_Theme
- * @since      05/31/2012  0.0.1
- * @version    01/07/2013
+ * @since      2012-05-31  0.0.1
+ * @version    2013-01-07
  * @author     Frank Bültge <frank@bueltge.de>
  */
 
@@ -77,7 +77,8 @@ class Wp_Basis_Admin_Branding {
 	/**
 	 * Change the `login_headerurl` to whatever was specified in $args
 	 *
-	 * @access public
+	 * @param $url
+	 * @return string
 	 */
 	public function login_headerurl( $url ) {
 		
@@ -87,7 +88,8 @@ class Wp_Basis_Admin_Branding {
 	/**
 	 * Change `login_headerurl` to what was specified in the $args
 	 *
-	 * @access public
+	 * @param $title
+	 * @return string|void
 	 */
 	public function login_headertitle( $title ) {
 		
@@ -122,7 +124,6 @@ class Wp_Basis_Admin_Branding {
 	/**
 	 * Add custom stylesheet file from param
 	 * 
-	 * @param  String $url
 	 * @return void
 	 */
 	public function add_stylesheet() {
@@ -132,7 +133,7 @@ class Wp_Basis_Admin_Branding {
 		
 		$style = esc_url( $this->args['login_style'] );
 		
-		wp_enqueue_style( 'wp-basis-login-branding', $style, FALSE, '02-15-2013', 'screen' );
+		wp_enqueue_style( 'wp-basis-login-branding', $style, array(), '02-15-2013', 'screen' );
 	}
 	
 	/**
@@ -169,7 +170,8 @@ class Wp_Basis_Admin_Branding {
 	 * Adds the designer link (`$args['designer_url']` & `args['designer_anchor`])
 	 * to the admin footer.
 	 *
-	 * @access public
+	 * @param  $text
+	 * @return string
 	 */
 	public function admin_footer_text( $text ) {
 		
@@ -184,7 +186,7 @@ class Wp_Basis_Admin_Branding {
 	/**
 	 * Maybe removes the "W" logo from the admin menu
 	 *
-	 * @access public
+	 * @param $admin_bar
 	 */
 	public function admin_bar_menu( $admin_bar ) {
 		
@@ -226,15 +228,18 @@ class Wp_Basis_Admin_Branding {
 	 * @access protected
 	 */
 	protected function designer_link() {
-		
-		if ( $this->args['designer_url'] && $this->args['designer_anchor'] ) {
-			return sprintf(
-				'<a href="%1$s" title="%2$s" rel="external">%2$s</a>',
-				esc_url( $this->args['designer_url'] ),
-				esc_attr( $this->args['designer_anchor'] )
-			);
-		}
-	
+
+		if ( ! $this->args['designer_url'] )
+			return NULL;
+
+		if ( ! $this->args['designer_anchor'] )
+			return NULL;
+
+		return sprintf(
+			'<a href="%1$s" title="%2$s" rel="external">%2$s</a>',
+			esc_url( $this->args['designer_url'] ),
+			esc_attr( $this->args['designer_anchor'] )
+		);
 	}
 	
 } // end class

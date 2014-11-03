@@ -2,7 +2,7 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
 	<ShortName>bueltge.de [by:ltge.de]</ShortName>
 	<Description>Use bueltge.de to search on blog.</Description>
-	<Url type="text/html" method="get" template="http://bueltge.de/?s={searchTerms}"></Url>
+	<Url type="text/html" method="get" template="http://bueltge.de/?s={searchTerms}"/>
 	<Contact>info@bueltge.de</Contact>
 	<LongName>bueltge.de [by:ltge.de] Weblog Search</LongName>
 	<Image height="16" width="16" type="image/x-icon">http://bueltge.de/favicon.ico</Image>

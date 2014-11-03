@@ -35,10 +35,10 @@ add_filter( 'site_transient_update_plugins', 'Wp_Basis_remove_update_nag' );
 /**
  * Disable plugin update notifications
  * 
- * @param  unknown_type $value
- * @since  01/07/2013
+ * @param  $value
+ * @since  2013-01-07
  * @link   http://dd32.id.au/2011/03/01/disable-plugin-update-notification-for-a-specific-plugin-in-wordpress-3-1/
- * @retrun array string $value
+ * @return array string $value
  */
 function Wp_Basis_remove_update_nag( $value ) {
 	

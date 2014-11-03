@@ -27,8 +27,10 @@ namespace Wp_Basis\Comment;
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
  * @since      2012-05-08  0.0.1
- * @version  06/05/2012
- * @author   Automattic, fb
+ * @version    2012-06-05
+ * @param      $comment
+ * @param      $args
+ * @param      $depth
  */
 function get_comment( $comment, $args, $depth ) {
 	
