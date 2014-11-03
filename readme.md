@@ -19,7 +19,14 @@ The new version with the codename `namespace` ;) is usable, but changed in the c
 * PHP 5.3 (use PHP namespaces)
 
 ## Child Theme Usage
-See the repository for a [starter kit](https://github.com/bueltge/WordPress-Basis-Theme-Child-Starter), a example.
+See the repository for a [starter kit](https://github.com/bueltge/wordpress-basis-theme-Child-Starter), a example.
+
+
+## Composer Usage
+The plugin is available as Composer package and can be installed via Composer:
+`composer create-project bueltge/wordpress-basis-theme --no-dev`.
+
+The package is on [packagist](https://packagist.org/packages/bueltge/wordpress-basis-theme) and the package name is `bueltge/wordpress-basis-theme`.
 
 ## Grunt usage
 ### What is Grunt?

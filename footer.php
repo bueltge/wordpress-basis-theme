@@ -23,7 +23,7 @@
 		?>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<?php do_action( 'wp_basis_footer_credits' );
-			printf( __( '<p class="site-info">Theme: %1$s by %2$s.</p>', 'wp_basis' ), 'WP Basis', '<a href="https://github.com/bueltge/WordPress-Basis-Theme/network/members" rel="designer">Contributer Team</a>' );
+			printf( __( '<p class="site-info">Theme: %1$s by %2$s.</p>', 'wp_basis' ), 'WP Basis', '<a href="https://github.com/bueltge/wordpress-basis-theme/network/members" rel="designer">Contributer Team</a>' );
 			if ( defined( 'WP_DEBUG' ) && WP_DEBUG )
 				printf( __( '<p>Generate Page with %1$sq in %2$ss.</p>', 'wp_basis' ), $wpdb->num_queries, timer_stop( 0 ) );
 			?>

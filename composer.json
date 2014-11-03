@@ -1,0 +1,25 @@
+{
+  "name": "bueltge/wordpress-basis-theme",
+  "description": "A simple Theme to start a new WordPress Theme",
+  "keywords"   : ["wordpress", "theme"],
+  "license": "GPL 2+",
+  "version": "0.1",
+  "type": "wordpress-theme",
+  "homepage": "http://wpbasis.de/",
+  "authors": [
+    {
+      "name": "Frank Bültge",
+      "homepage": "http://bueltge.de",
+      "email": "frank@bueltge.de",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/bueltge/wordpress-basis-theme/issues"
+  },
+  "require": {
+    "php": ">=5.3",
+    "composer/installers": "~1.0",
+    "phpmd/phpmd": "2.1.3"
+  }
+}

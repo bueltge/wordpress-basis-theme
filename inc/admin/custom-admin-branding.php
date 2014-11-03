@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Custom Admin Branding
- * Plugin URI:  https://github.com/bueltge/WordPress-Basis-Theme/tree/namespace/inc/admin
+ * Plugin URI:  https://github.com/bueltge/wordpress-basis-theme/tree/namespace/inc/admin
  * Description: Allow theme/plugin developers to easily brand the WordPress login and admin screens
  * Version:     0.0.1
  * Author:      Frank Bültge
