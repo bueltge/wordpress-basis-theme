@@ -23,7 +23,9 @@ See the repository for a [starter kit](https://github.com/bueltge/wordpress-basi
 
 ### Composer Usage
 The plugin is available as Composer package and can be installed via Composer:
-`composer create-project bueltge/wordpress-basis-theme --no-dev`.
+```shell
+composer create-project bueltge/wordpress-basis-theme --no-dev`.
+```
 
 The package is on [packagist](https://packagist.org/packages/bueltge/wordpress-basis-theme) and the package name is `bueltge/wordpress-basis-theme`.
 
