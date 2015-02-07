@@ -7,3 +7,5 @@
 .sass-cache
 node_modules
 .npm-debug.log
+*.lock
+vendor
