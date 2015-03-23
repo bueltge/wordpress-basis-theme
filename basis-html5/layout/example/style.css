@@ -1,0 +1,451 @@
+@charset "UTF-8";
+
+/**
+ * @CSS for wordpress-basis-theme for xHTML5; a example
+ * @version (0.2)
+ * @date (22.07.2009 10:24:24)
+ * @lastmodified (10.12.2010 21:45:43)
+ * @author (Frank Bueltge)
+ */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background: #fff;
+color: #111;
+font-family: "Lucida Sans Unicode","Lucida Sans", "Trebuchet MS", "Lucida Grande", "Bitstream Sans Vera", Verdana, Arial, Tahoma, Helvetica, Sans-Serif;
+font-style: normal;
+line-height: 1.5em;
+font-size: 100%;
+margin: 0;
+padding: 2px 2em;
+}
+
+code, pre {
+font-family: Courier, "Lucida Console","Courier New", Sans-Serif;
+}
+
+pre {
+font-size: 60%;
+line-height: 200%;
+width: 100%;
+max-height: 400px;
+overflow: auto;
+padding: 5px;
+background: #eee;
+}
+
+p {
+font-size: 80%;
+padding: 0;
+}
+
+h2 {
+font-size: 120%;
+}
+
+h3 {
+font-size: 100%;
+}
+
+h4 {
+font-size: 80%;
+}
+
+h1, h2, h3, h4 {
+font-family: Georgia,"Trebuchet MS", "Lucida Sans", "Lucida Grande", "Bitstream Sans Vera", Verdana, Arial, Tahoma, Helvetica, Sans-Serif;
+color: #333;
+margin: 20px 0 0 0;
+padding: 2px 0;
+}
+
+blockquote {
+margin-left: 0;
+padding-left: 1em;
+border-left: 5px solid #ddd;
+}
+
+blockquote p:before {
+content:open-quote;
+font-size: 1.5em;
+}
+
+blockquote p:after {
+content:close-quote;
+font-size: 1.5em;
+}
+
+div#wrap {
+border: none;
+width: 100%;
+text-align: left;
+}
+
+#login {
+float: right;
+}
+
+header#header {
+border-bottom: 1px solid #ccc;
+margin: 5px;
+padding: 15px 10px;
+}
+
+header#header h1 {
+font-size: 220%;
+width: 80%;
+margin: 0;
+}
+
+header#header p {
+font-size: 60%;
+margin: 5px 0;
+}
+
+div#content {
+width: 65%;
+float: left;
+font-size: 1.1em;
+margin: 5px;
+padding: 15px;
+line-height: 1.7em;
+}
+
+div#content h1, div#content h2, div#content h3, div#content h4 {
+clear: both;
+}
+
+div#content h2 a:link, div#content h2 a:visited, #header h1 a:link, #header h1 a:visited {
+color: #0100be;
+font-weight: 400;
+text-decoration: none;
+border: none;
+}
+
+div#content h2 a:hover, div#content h2 a:active, #header h1 a:hover, #header h1 a:active {
+color: #999;
+}
+
+.sticky {
+border: 3px solid #0100be;
+padding: 5px 20px;
+}
+
+.bypostauthor {
+background-color: #eee;
+}
+
+.post p{
+margin: 0 0 15px 0;
+}
+
+.post img {
+border: 1px solid #eee;
+padding: 5px;
+}
+
+.post footer,.post ul.link,.post ul.inline {
+font-size: 0.8em;
+}
+
+.post footer {
+margin: 10px 0;
+padding: 0;
+border-top: 1px solid #eee;
+text-align: right;
+}
+
+#commentbox {
+clear: both;
+border-top: 1px solid #eee;
+margin: 10px 0;
+}
+
+ol#commentlist {
+list-style-position: inside;
+margin: 2px 0;
+padding: 0;
+}
+
+#commentlist li {
+border-bottom: 1px solid #eee;
+margin: 10px 0;
+}
+
+#commentform textarea {
+width: 90%;
+}
+
+#commentform label,#commentform textarea {
+display: block;
+}
+
+#commentform input.submit {
+width: 40%;
+margin: 2px 0;
+}
+
+.approve {
+border: 1px solid #ccc;
+background: #eee;
+font-size: 90%;
+padding: 5px;
+}
+
+nav {
+background: #fff;
+color: #111;
+width: 25%;
+float: right;
+margin: 5px;
+padding: 5px;
+}
+
+nav ul {
+list-style-type: none;
+margin: 2px;
+padding: 0;
+}
+
+nav ul li ul li {
+list-style: disc inside;
+padding: 2px 0;
+}
+
+nav h2 {
+font-size: 100%;
+margin: 20px 0 0 0;
+padding: 4px 0;
+}
+
+.h2sidebar {
+font-size: 100%;
+font-weight: 900;
+font-family: Georgia,"Trebuchet MS", "Lucida Sans", "Lucida Grande", "Bitstream Sans Vera", Verdana, Arial, Tahoma, Helvetica, Sans-Serif;
+color: #333;
+}
+
+nav li a {
+border: none;
+}
+
+nav li ul li ul li {
+list-style: circle inside;
+border: none;
+margin-left: 10px;
+}
+
+nav.meta-nav {
+float: none;
+width: 100%;
+}
+
+#searchform label {
+font-weight: 700;
+}
+
+#searchform input.submit {
+width: 30%;
+}
+
+footer {
+border-top: 1px solid #ccc;
+color: #111;
+clear: both;
+text-align: center;
+margin: 5px;
+padding: 10px;
+}
+
+footer li {
+display: inline;
+margin: 0 3px;
+}
+
+.center {
+text-align: center;
+}
+
+.textright {
+text-align: right;
+}
+
+.right {
+float: right;
+}
+
+.left {
+float: left;
+}
+
+.none {
+display: none;
+}
+
+.righttxt {
+text-align: right;
+}
+
+.credits, .clear {
+clear: both;
+}
+
+img {
+margin: 0 2px;
+max-width: 600px;
+}
+
+/**
+ * @section for WordPress classes at images
+ * @css-for (images)
+ */
+.aligncenter, div.aligncenter {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.alignleft {
+float: left;
+}
+
+.alignright {
+float: right;
+}
+
+.wp-caption {
+border: 1px solid #eee;
+text-align: center;
+padding-top: 5px;
+margin: 10px;
+}
+
+.wp-caption img {
+margin: 0;
+padding: 0;
+border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+font-size: .8em;
+line-height: 1em;
+padding: 0 5px 6px;
+margin: 0;
+}
+
+.gallery-caption {
+border: 1px solid #eee;
+text-align: center;
+padding-top: 5px;
+margin: 10px;
+}
+
+a:link, a:visited {
+font-weight: 400;
+color: #0100be;
+text-decoration: none;
+}
+
+a:hover, a:active {
+color: #666;
+text-decoration: none;
+border: none;
+}
+
+input, textarea, select, option {
+font-family: "Lucida Sans", "Trebuchet MS", "Lucida Grande", "Bitstream Sans Vera", Verdana, Arial, Tahoma, Helvetica, Sans-Serif;
+font-size: 100%;
+background: #eee;
+color: #111;
+border: 1px solid #ccc;
+margin: 2px;
+padding: 2px;
+}
+
+fieldset, legend {
+background: transparent;
+color: #111;
+border: none;
+padding: 5px;
+}
+
+label, legend {
+font-weight:  400;
+}
+
+ul {
+list-style-type: disc;
+list-style-position: outside;
+margin: 5px 2em;
+padding: 2px;
+}
+
+ol {
+list-style-position: outside;
+margin: 5px 2em;
+padding: 2px;
+}
+
+ol li {
+clear: both;
+}
+
+.link li, .inline li {
+display: inline;
+margin: 5px 0;
+padding: 0;
+}
+
+ul.inline, ul.link {
+list-style: none;
+margin: 5px 0;
+padding: 0;
+}
+
+.inline li {
+padding: 2px 15px 2px 0;
+}
+
+table {
+color: #111;
+width: 100%;
+margin: 2px auto;
+padding: 0;
+border: 1px solid #eee;
+}
+
+table .second, table th {
+background: #eee;
+}
+
+caption {
+color: #333;
+font-weight: 700;
+padding: 5px;
+}
+
+td, th, tr {
+text-align: left;
+vertical-align: top;
+padding: 5px;
+}
+
+hr, .border {
+border: 1px solid #ccc;
+}
+
+.post h2 {
+border-bottom: 1px solid #eee;
+}
+
+#commentform input, #searchform input#s {
+width: 50%;
+}
+
+nav p, #foot ul {
+margin: 2px;
+padding: 0;
+}

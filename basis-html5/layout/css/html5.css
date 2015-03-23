@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/**
+ * @CSS for Basis - wordpress-theme - for html5 in older browser
+ * @version (0.1)
+ * @date (22.07.2009 10:18:00)
+ * @lastmodified (11.01.2010 12:34:51)
+ * @author (Frank Bueltge)
+ */
+ 
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}

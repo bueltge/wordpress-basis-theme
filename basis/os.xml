@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+	<ShortName>bueltge.de [by:ltge.de]</ShortName>
+	<Description>Use bueltge.de to search on blog.</Description>
+	<Url type="text/html" method="get" template="http://bueltge.de/?s={searchTerms}"></Url>
+	<Contact>info@bueltge.de</Contact>
+	<LongName>bueltge.de [by:ltge.de] Weblog Search</LongName>
+	<Image height="16" width="16" type="image/x-icon">http://bueltge.de/favicon.ico</Image>
+	<Tags>Weblog WordPress Webdevelopment</Tags>
+	<Url type="application/atom+xml" template="http://bueltge.de/?q={searchTerms}&amp;pw={startPage?}&amp;format=atom"/>
+	<Url type="application/rss+xml" template="http://bueltge.de/?q={searchTerms}&amp;pw={startPage?}&amp;format=rss"/>
+	<Url type="text/html" template="http://bueltge.de/?q={searchTerms}&amp;pw={startPage?}"/>
+	<Query role="example" searchTerms="blog"/>
+	<Developer>Frank Bueltge</Developer>
+	<Attribution>
+	    Search data Copyright 2007, bueltge.de [by:ltge.de], All Rights Reserved
+	</Attribution>
+	<SyndicationRight>open</SyndicationRight>
+	<AdultContent>false</AdultContent>
+	<Language>de-DE</Language>
+	<OutputEncoding>UTF-8</OutputEncoding>
+	<InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>

@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+/**
+ * sed to style the TinyMCE editor.
+ */
+html .mceContentBody {
+}
+* {
+}
+
+h1, h2, h3, h4, h5, h6, fieldset, .commentcount {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+img {
+}
+
+a:link, a:visited {
+}
+ 
+a:active, a:hover{
+}

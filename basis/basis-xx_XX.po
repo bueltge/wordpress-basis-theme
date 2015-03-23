@@ -1,0 +1,365 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Basis\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-16 21:57+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Dominik Schilling <dominik.schilling@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:10
+msgid "Oops... Seite nicht gefunden (Fehler 404)"
+msgstr ""
+
+#: 404.php:11
+msgid "Entschuldigung, aber deine angeforderte Seite konnte nicht gefunden werden.<br />Benutze doch"
+msgstr ""
+
+#: 404.php:13
+msgid "die Suche mit Stichworten nach dem gew&uuml;nschten Inhalt, in dem du Suchbegriffe in das folgende Suchfeld eingibst und anschlie&szlig;end Suche klickst."
+msgstr ""
+
+#: 404.php:15
+msgid "Solltest du von einer anderen Seite durch einen fehlerhaften Link hierher gekommen sein, so freue ich mich, wenn du mir eine Fehlerbeschreibung sendest. Dazu kannst du das"
+msgstr ""
+
+#: 404.php:15
+msgid "Kontakt-Formular"
+msgstr ""
+
+#: 404.php:15
+msgid "nutzen. Ich werde mich dann bem&uuml;hen, den Fehler zu beheben. Vielen Dank schon jetzt!"
+msgstr ""
+
+#: 404.php:38
+msgid "Aktuell liegen auf dem Blog folgenden Beitr&auml;ge und Kommentarentr&auml;ge."
+msgstr ""
+
+#: 404.php:40
+#: sidebar.php:26
+msgid "Beitr&auml;ge"
+msgstr ""
+
+#: 404.php:41
+#: functions.php:781
+#: functions.php:793
+msgid "Kommentare"
+msgstr ""
+
+#: 404.php:44
+msgid "Journal"
+msgstr ""
+
+#: 404.php:69
+msgid "Datum und Zeit: "
+msgstr ""
+
+#: 404.php:74
+msgid "Das ist eine automatische Mitteilung, eine Antwort ist vergeblich. Diese Mitteilung wird jedesmal gesendet, wenn ein nicht existierendes Dokument verlangt wird. Damit k&ouml;nnen wir das Problem eventuell beheben."
+msgstr ""
+
+#: comments.php:10
+msgid "Bitte lade diese Datei nicht direkt. Danke!"
+msgstr ""
+
+#: comments.php:15
+#: comments.php:21
+msgid "Passwort eingeben, um Kommentare zu sehen."
+msgstr ""
+
+#: comments.php:49
+msgid "Ein Pingback"
+msgstr ""
+
+#: comments.php:49
+msgid "% Pingbacks"
+msgstr ""
+
+#: comments.php:57
+msgid "Ein Trackback"
+msgstr ""
+
+#: comments.php:57
+msgid "% Trackbacks"
+msgstr ""
+
+#: comments.php:76
+msgid "Die Kommentarfunktion f&uuml;r diesen Beitrag ist geschlossen"
+msgstr ""
+
+#: comments.php:90
+msgid "Keine Kommentare"
+msgstr ""
+
+#: comments.php:90
+msgid "Ein Kommentar"
+msgstr ""
+
+#: comments.php:90
+msgid "% Kommentare"
+msgstr ""
+
+#: comments.php:97
+#: functions.php:728
+msgid "Dein Kommentar muss erst frei geschaltet werden."
+msgstr ""
+
+#: comments.php:100
+msgid "Edit"
+msgstr ""
+
+#: comments.php:118
+msgid "Kommentare sind geschlossen."
+msgstr ""
+
+#: comments.php:128
+msgid "Schreibe einen Kommentar"
+msgstr ""
+
+#: comments.php:131
+msgid "Hier klicken um die Antwort abzubrechen."
+msgstr ""
+
+#: comments.php:136
+msgid "Du musst"
+msgstr ""
+
+#: comments.php:136
+msgid "eingeloggt</a> sein um diesen Beitrag zu kommentieren."
+msgstr ""
+
+#: comments.php:144
+msgid "Du bist eingeloggt als"
+msgstr ""
+
+#: comments.php:144
+msgid "Hier kannst Du Dich ausloggen"
+msgstr ""
+
+#: comments.php:144
+msgid "Abmelden"
+msgstr ""
+
+#: comments.php:148
+msgid "Name"
+msgstr ""
+
+#: comments.php:148
+#: comments.php:151
+msgid "(Pflichtfeld)"
+msgstr ""
+
+#: comments.php:151
+msgid "E-Mail"
+msgstr ""
+
+#: comments.php:154
+msgid "Webseite"
+msgstr ""
+
+#: comments.php:159
+msgid "Du kannst diese Tags verwenden:"
+msgstr ""
+
+#: comments.php:162
+msgid "Kommentar absenden"
+msgstr ""
+
+#: functions.php:131
+msgid "Keine &auml;hnlichen Beitr&auml;ge"
+msgstr ""
+
+#: functions.php:158
+msgid "Kategorie: "
+msgstr ""
+
+#: functions.php:243
+msgid "<p class=\"breadcrumb\">&raquo; <a href=\""
+msgstr ""
+
+#: functions.php:243
+msgid "\">"
+msgstr ""
+
+#: functions.php:243
+msgid "</a> &raquo; "
+msgstr ""
+
+#: functions.php:248
+#: functions.php:253
+msgid " &raquo; "
+msgstr ""
+
+#: functions.php:250
+#: functions.php:256
+msgid "</p>"
+msgstr ""
+
+#: functions.php:256
+msgid "Suche nach: "
+msgstr ""
+
+#: functions.php:722
+#, php-format
+msgid "<p><cite class=\"fn\">%s</cite> <span class=\"says\">schrieb am</span></p>"
+msgstr ""
+
+#: functions.php:723
+#, php-format
+msgid "%1$s um %2$s"
+msgstr ""
+
+#: functions.php:723
+msgid "(Bearbeiten)"
+msgstr ""
+
+#: functions.php:734
+msgid "Antworten"
+msgstr ""
+
+#: functions.php:780
+#: functions.php:792
+msgid "Kommentar"
+msgstr ""
+
+#: functions.php:783
+msgid "Ping und Trackback"
+msgstr ""
+
+#: functions.php:784
+msgid "Pings und Trackbacks"
+msgstr ""
+
+#: functions.php:786
+msgid "Pingback"
+msgstr ""
+
+#: functions.php:787
+msgid "Pingbacks"
+msgstr ""
+
+#: functions.php:789
+msgid "Trackback"
+msgstr ""
+
+#: functions.php:790
+msgid "Trackbacks"
+msgstr ""
+
+#: functions.php:797
+msgid "%"
+msgstr ""
+
+#: functions.php:799
+msgid "Keine"
+msgstr ""
+
+#: functions.php:801
+msgid "Ein"
+msgstr ""
+
+#: functions.php:951
+msgid "Weiterlesen"
+msgstr ""
+
+#: header.php:15
+msgid "Kategorie"
+msgstr ""
+
+#: header.php:54
+msgid "Direkt zum Beitrag; Tastaturkuerzel 0"
+msgstr ""
+
+#: header.php:54
+msgid "&raquo; Direkt zum Beitrag"
+msgstr ""
+
+#: image.php:20
+#: index.php:38
+#: page.php:14
+#: single.php:14
+msgid "Aktualisiert am"
+msgstr ""
+
+#: image.php:20
+#: index.php:38
+#: page.php:14
+#: single.php:14
+msgid "Editieren"
+msgstr ""
+
+#: image.php:27
+#: index.php:49
+#: page.php:21
+#: search.php:24
+#: single.php:22
+msgid "Nichts gefunden, was den Suchkriterien entspricht."
+msgstr ""
+
+#: index.php:13
+msgid "Archiv f&uuml;r die Kategorie"
+msgstr ""
+
+#: index.php:15
+msgid "Tagesarchiv"
+msgstr ""
+
+#: index.php:17
+msgid "Monatsarchiv"
+msgstr ""
+
+#: index.php:19
+msgid "Jahresarchiv"
+msgstr ""
+
+#: index.php:21
+#: search.php:10
+#, php-format
+msgid "Die Suche ergab %s Artikel"
+msgstr ""
+
+#: index.php:23
+msgid "Archiv zum Autor"
+msgstr ""
+
+#: index.php:25
+msgid "Archiv f&uuml;r das Schlagwort"
+msgstr ""
+
+#: index.php:27
+#: sidebar.php:33
+msgid "Archiv"
+msgstr ""
+
+#: index.php:31
+msgid "class=\"post\""
+msgstr ""
+
+#: index.php:37
+msgid "... weiterlesen &raquo;"
+msgstr ""
+
+#: index.php:40
+msgid "weiterlesen &raquo;"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: searchform.php:11
+msgid "Suche"
+msgstr ""
+
+#: sidebar.php:23
+msgid "Seiten"
+msgstr ""
+

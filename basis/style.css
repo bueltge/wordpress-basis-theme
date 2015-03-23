@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/**
+ * @package WordPress
+ * @subpackage Basis_Theme
+ */
+ 
+/*
+Theme Name: Basis
+Theme URI: http://wpbasis.de/
+Description: Basis theme for WordPress to start a new theme
+Version: 1.2.3
+Author: Frank Bueltge
+Author URI: http://bueltge.de/
+Tags: threaded-comments, sticky-post
+License: GNU General Public License (GPL) version 3
+last Date: 18.03.2010 09:34:27
+*/
+
+@import url('layout/css/style.css');

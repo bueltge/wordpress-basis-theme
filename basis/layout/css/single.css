@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/**
+ * @CSS for single, page
+ * @version (1.0)
+ * @date (19.02.2008 21:01:00)
+ * @lastmodified (11.01.2010 12:34:04)
+ * @author (Frank Bueltge)
+ */
+
+/**
+ * @css-for (Kommentare)
+ */
+#commentbox h3 {
+margin: 20px 0 15px;
+}
+
+#author, #email, #url, #commentform textarea {
+width: 99%;
+border: none;
+border-left: 1px solid #BBB;
+border-bottom: 1px solid #BBB;
+padding: 2px;
+margin: 5px 0;
+}
+
+#commentform input[type=submit] {
+border: none;
+width: 99%;
+text-align: right;
+margin: 0 0 2px 5px;
+background: url('images/arrow.png') no-repeat left;
+}
+
+#commentform input[type=submit]:hover {
+border-bottom: 1px solid #010101;
+cursor: pointer;
+}
+
+#commentlist li {
+list-style-type: none;
+border: none;
+border-left: 1px solid #BBB;
+border-bottom: 1px solid #BBB;
+padding: 5px 10px;
+margin: 20px 0;
+}
+
+#commentlist .alt {
+border-left: 1px solid #76BAFE;
+border-bottom: 1px solid #76BAFE;
+}
+
+.comment_author, .comment_time {
+font-family: Verdana, Helvetica, Arial, Tahoma, Sans-Serif;
+font-size: 12px;
+}
+
+.comment_text {
+border-top: 1px solid #BBB;
+border-bottom: 1px solid #BBB;
+padding: 10px 0;
+}
+
+.alt .comment_text {
+border-top: 1px solid #76BAFE;
+border-bottom: 1px solid #76BAFE;
+padding: 10px 0;
+}
+
+.comment-number {
+float: right;
+font-size: 25px;
+margin: 0;
+color: #BBB;
+}
+
+.alt .comment-number {
+float: right;
+font-size: 25px;
+margin: 0;
+color: #76BAFE;
+}
+
+.approve {
+font-weight: 700;
+}

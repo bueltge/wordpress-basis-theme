@@ -1,0 +1,119 @@
+/*
+ *   @name visual
+ *   @type tripoli plugin
+ *
+ *   @desc adds several visual details such as link colors, borders, blockquotes, form controls etc.
+ *   @author David Hellsing
+ *   @version 1.0
+ *   @cat plugins
+ * 
+**/
+
+/*
+_______________________________
+VISUAL PLUG */
+
+blockquote
+{
+	color:#666;
+}
+
+blockquote > *:first-child:before /* Tripoli bonus: pure CSS blockquote */
+{
+	content:"\201C";
+	font-size:2.5em;
+	margin-left:-.62em;
+	font-family:georgia,serif;
+	padding-right:.2em;
+	color:#aaa;
+	line-height:0;
+}
+
+abbr[title],acronym[title],dfn[title]
+{
+	border-bottom:1px solid #ccc;
+}
+
+ins,dfn
+{
+	border-bottom-color:#666;
+}
+
+del
+{
+	color:#666;
+}
+
+fieldset
+{
+	border-color:#ccc;
+}
+
+textarea,input[type='text'],input[type='password'],select
+{
+	border:1px solid #ccc;
+	background:#fff;
+}
+
+fieldset
+{
+	border:1px solid #ccc;
+}
+
+textarea:hover,input[type='text']:hover,input[type='password']:hover,select:hover
+{
+	border-color:#aaa;
+}
+
+textarea:focus,input[type='text']:focus,input[type='password']:focus,select:focus
+{
+	outline:2px solid #e4e4e4;
+	border-color:#888;
+}
+
+.content hr
+{
+	background:#aaa;
+	color:#aaa;
+}
+
+.content table
+{
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+}
+
+.content th,.content td
+{
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ccc;
+}
+
+.content th,.content td
+{
+	padding:.8em;
+}
+
+a:link
+{
+	color:#36c;
+}
+
+a:visited
+{
+	color:#99c;
+}
+
+a:hover,code,pre
+{
+	color:#c33;
+}
+
+a:active,.a:focus
+{
+	color:#000;
+}
+
+/*
+_______________________________
+END */

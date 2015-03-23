@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+/**
+ * @CSS for wordpress-theme
+ * @version (1.0)
+ * @date (19.02.2008 21:01:00)
+ * @lastmodified (11.01.2010 12:33:58)
+ * @author (Frank Bueltge)
+ */
+
+
+/**
+ * load a example style
+ */
+@import url('../example/style.css') screen;
+
+
+/**
+ * @CSS for RESET
+ * use a reset style
+ *
+ * @author (http://meyerweb.com/eric/tools/css/reset/)
+ */
+/**
+@import url(reset/reset.css);
+*/
+
+/**
+ * @author (http://devkick.com/lab/tripoli/)
+ */
+/**
+@import url('reset/tripoli.base.css');
+@import url('reset/plugins/tripoli.visual.css');
+@import url('reset/plugins/tripoli.type.css')
+*/
+
+/**
+ * my favorit
+ */
+/**
+* {
+margin: 0;
+padding: 0;	
+}
+*/
+
+/**
+ * default sectors
+ */
+html {
+}
+
+body {
+}
+
+p {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4, h5, h6 {
+}
+
+h1, h2, h3, h4 {
+}
+
+blockquote p:before {
+}
+
+blockquote p:after {
+}
+
+/**
+ * @section layout
+ * @css-for (All)
+ */
+#wrap {
+}
+
+/**
+ * @section layout
+ * @css-for (header)
+ */
+#header {
+}
+
+/**
+ * @section layout
+ * @css-for (content)
+ */
+#content {
+}
+
+.post p{
+}
+
+/**
+ * @section layout
+ * @css-for (sidebar)
+ */
+#sidebar {
+}
+
+/**
+ * @section layout
+ * @css-for (footer)
+ */
+#footer {
+}
+
+/**
+ * @section layout
+ * @css-for (links)
+ */
+a:link, a:visited {
+}
+
+a:hover, a:active {
+}

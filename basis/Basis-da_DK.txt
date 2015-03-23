@@ -1,0 +1,22 @@
+Basis 1.2.1
+
+Sprogfilerne skal ligge i wpbasis
+
+Oplysning om stierne er pakket med.
+Understøtter dit udpakningsprogram anvendelse heraf,
+kan du udpakke direkte til (formentlig) wp-content/themes og få sprogfilerne i begge mapper.
+
+Evt. opdateringer eller info herom kan hentes via http://wordpress.blogos.dk/temaer/#Basis
+eller direkte på http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=164
+
+Se evt. også http://wordpress.blogos.dk/tag/basis eller wpbasis
+
+FOR THE DEVELOPER
+You are very welcome to check for updated language files in one of the following ways:
+
+1. On my downloads page that list all files available for download:
+http://wordpress.blogos.dk/wpdadkdownloads/
+
+2. Directly on my Download Monitor download page: http://wordpress.blogos.dk/s%C3%B8g-efter-downloads/?did=164
+
+If I have blogged about your plugin, theme or other resource, you will be able to find it via this tag: http://wordpress.blogos.dk/tag/basis

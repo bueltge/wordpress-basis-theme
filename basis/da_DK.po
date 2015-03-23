@@ -1,0 +1,464 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Basis Theme 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-04 21:47+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Team Blogos <wordpress@blogos.dk>\n"
+"Language-Team: Team Blogos <wordpress@blogos.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: d:/wordpress/themes/translated/wpbasis\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: d:/wordpress/themes/translated/wpbasis\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:10
+#@ basis
+msgid "Oops... Seite nicht gefunden (Fehler 404)"
+msgstr "Ups &hellip; Side ikke fundet (fejl 404)"
+
+#: 404.php:11
+#@ basis
+msgid "Entschuldigung, aber deine angeforderte Seite konnte nicht gefunden werden.<br />Benutze doch"
+msgstr "Beklager, men den side, du bad om, findes ikke.<br />. Du kan imidlertid benytte"
+
+#: 404.php:13
+#@ basis
+msgid "die Suche mit Stichworten nach dem gew&uuml;nschten Inhalt, in dem du Suchbegriffe in das folgende Suchfeld eingibst und anschlie&szlig;end Suche klickst."
+msgstr "en søgning med stikord for at finde det ønskede indhold. Du skal blot indtaste søgeordene i det følgende søgefelt og derefter klik på Søg."
+
+#: 404.php:15
+#@ basis
+msgid "Solltest du von einer anderen Seite durch einen fehlerhaften Link hierher gekommen sein, so freue ich mich, wenn du mir eine Fehlerbeschreibung sendest. Dazu kannst du das"
+msgstr "Hvis du er kommet fra en anden site via et fejlagtigt link, vil det glæde mig, hvis du sender mig en fejlbeskrivelse. Du kan bruge"
+
+#: 404.php:15
+msgid "Kontakt-Formular"
+msgstr "kontakformularen"
+
+#: 404.php:15
+#@ basis
+msgid "nutzen. Ich werde mich dann bem&uuml;hen, den Fehler zu beheben. Vielen Dank schon jetzt!"
+msgstr "til det. Jeg vil så gøre, hvad jeg kan, for at rette fejlen. På forhånd mange tak!"
+
+#: 404.php:38
+#@ basis
+msgid "Aktuell liegen auf dem Blog folgenden Beitr&auml;ge und Kommentarentr&auml;ge."
+msgstr "I øjeblikket ligger følgende indlæg og kommentarer på bloggen."
+
+#: 404.php:40
+#: sidebar.php:26
+#@ basis
+msgid "Beitr&auml;ge"
+msgstr "Indlæg"
+
+#: 404.php:41
+#: functions.php:781
+#: functions.php:793
+#@ basis
+msgid "Kommentare"
+msgstr "Kommentarer"
+
+#: 404.php:44
+msgid "Journal"
+msgstr "Nye indlæg"
+
+#: 404.php:69
+#@ basis
+msgid "Datum und Zeit: "
+msgstr "Dato og tid: "
+
+#: 404.php:74
+#@ basis
+msgid "Das ist eine automatische Mitteilung, eine Antwort ist vergeblich. Diese Mitteilung wird jedesmal gesendet, wenn ein nicht existierendes Dokument verlangt wird. Damit k&ouml;nnen wir das Problem eventuell beheben."
+msgstr "Dette er en automatisk meddelelse, så et svar vil være forgæves. Denne meddelelse sendes hver gang, en browser anmoder om et ikke-eksisterende dokument. Herved kan vi eventuelt få afhjulpet problemet."
+
+#: comments.php:10
+#@ basis
+msgid "Bitte lade diese Datei nicht direkt. Danke!"
+msgstr "Indlæs venligst ikke denne fil direkte. Tak!"
+
+#: comments.php:15
+#: comments.php:21
+#@ basis
+msgid "Passwort eingeben, um Kommentare zu sehen."
+msgstr "Du skal indtaste kodeord for at kunne se kommentarer."
+
+#: comments.php:49
+#@ basis
+msgid "Ein Pingback"
+msgstr "&Eacute;n pingback"
+
+#: comments.php:49
+#@ basis
+msgid "% Pingbacks"
+msgstr "% pingbacks"
+
+#: comments.php:57
+#@ basis
+msgid "Ein Trackback"
+msgstr "&Eacute;n trackback"
+
+#: comments.php:57
+#@ basis
+msgid "% Trackbacks"
+msgstr "% trackbacks"
+
+#: comments.php:76
+#@ basis
+msgid "Die Kommentarfunktion f&uuml;r diesen Beitrag ist geschlossen"
+msgstr "Kommentarfunktionen for dette indlæg er lukket"
+
+#: comments.php:90
+#@ basis
+msgid "Keine Kommentare"
+msgstr "Ingen kommentarer"
+
+#: comments.php:90
+#@ basis
+msgid "Ein Kommentar"
+msgstr "&Eacute;n kommentar"
+
+#: comments.php:90
+#@ basis
+msgid "% Kommentare"
+msgstr "% kommentarer"
+
+#: comments.php:97
+#: functions.php:728
+#@ basis
+msgid "Dein Kommentar muss erst frei geschaltet werden."
+msgstr "Din kommentar skal først frigives."
+
+#: comments.php:100
+#@ basis
+msgid "Edit"
+msgstr "Redigér"
+
+#: comments.php:118
+#@ basis
+msgid "Kommentare sind geschlossen."
+msgstr "Der er lukket for kommentarer."
+
+#: comments.php:128
+#@ basis
+msgid "Schreibe einen Kommentar"
+msgstr "Skriv en kommentar"
+
+#: comments.php:131
+#@ basis
+msgid "Hier klicken um die Antwort abzubrechen."
+msgstr "Klik her, hvis du vil fortryde dit svar."
+
+#: comments.php:136
+#@ basis
+msgid "Du musst"
+msgstr "Du skal være"
+
+#: comments.php:136
+#@ basis
+msgid "eingeloggt</a> sein um diesen Beitrag zu kommentieren."
+msgstr "logget ind</a> for at kunne kommentere dette indlæg."
+
+#: comments.php:144
+#@ basis
+msgid "Du bist eingeloggt als"
+msgstr "Du er logget ind som"
+
+#: comments.php:144
+#@ basis
+msgid "Hier kannst Du Dich ausloggen"
+msgstr "Her kan du logge ud"
+
+#: comments.php:144
+#@ basis
+msgid "Abmelden"
+msgstr "Log ud"
+
+#: comments.php:148
+#@ basis
+msgid "Name"
+msgstr "Navn"
+
+#: comments.php:148
+#: comments.php:151
+#@ basis
+msgid "(Pflichtfeld)"
+msgstr "(skal udfyldes)"
+
+#: comments.php:151
+#@ basis
+msgid "E-Mail"
+msgstr "Email"
+
+#: comments.php:154
+#@ basis
+msgid "Webseite"
+msgstr "Website"
+
+#: comments.php:159
+#@ basis
+msgid "Du kannst diese Tags verwenden:"
+msgstr "Du må bruge disse tags:"
+
+#: comments.php:162
+#@ basis
+msgid "Kommentar absenden"
+msgstr "Indsend kommentar"
+
+#: functions.php:39
+#, php-format
+msgid "%s Beitrag"
+msgid_plural "%s Beitr&auml;ge"
+msgstr[0] "%s indlæg"
+msgstr[1] "%s indlæg"
+
+#: functions.php:44
+#, php-format
+msgid "%s Seite"
+msgid_plural "%s Seiten"
+msgstr[0] "%s side"
+msgstr[1] "%s sider"
+
+#: functions.php:55
+#, php-format
+msgid "%s Kommentar"
+msgid_plural "%s Kommentare"
+msgstr[0] "%s kommentar"
+msgstr[1] "%s kommentarer"
+
+#: functions.php:131
+#@ basis
+msgid "Keine &auml;hnlichen Beitr&auml;ge"
+msgstr "Ingen lignende indlæg"
+
+#: functions.php:158
+#@ basis
+msgid "Kategorie: "
+msgstr "Kategori: "
+
+#: functions.php:243
+msgid "<p class=\"breadcrumb\">&raquo; <a href=\""
+msgstr "<p class=\"breadcrumb\">&raquo; <a href=\""
+
+#: functions.php:243
+msgid "\">"
+msgstr "\">"
+
+#: functions.php:243
+msgid "</a> &raquo; "
+msgstr "</a> &raquo; "
+
+#: functions.php:248
+#: functions.php:253
+msgid " &raquo; "
+msgstr " &raquo; "
+
+#: functions.php:256
+msgid "</p>"
+msgstr "</p>"
+
+#: functions.php:256
+#@ basis
+msgid "Suche nach: "
+msgstr "Søg efter: "
+
+#: functions.php:722
+#, php-format
+#@ basis
+msgid "<p><cite class=\"fn\">%s</cite> <span class=\"says\">schrieb am</span></p>"
+msgstr "<p><cite class=\"fn\">%s</cite> <span class=\"says\">skrev til</span></p>"
+
+#: functions.php:723
+#, php-format
+#@ basis
+msgid "%1$s um %2$s"
+msgstr "%1$s kl. %2$s"
+
+#: functions.php:723
+#@ basis
+msgid "(Bearbeiten)"
+msgstr "(Redigér)"
+
+#: functions.php:734
+#@ basis
+msgid "Antworten"
+msgstr "Besvar"
+
+#: functions.php:780
+#: functions.php:792
+#@ basis
+msgid "Kommentar"
+msgstr "Kommentar"
+
+#: functions.php:783
+#@ basis
+msgid "Ping und Trackback"
+msgstr "Ping og trackback"
+
+#: functions.php:784
+#@ basis
+msgid "Pings und Trackbacks"
+msgstr "Pings og trackbacks"
+
+#: functions.php:786
+#@ basis
+msgid "Pingback"
+msgstr "Pingback"
+
+#: functions.php:787
+#@ basis
+msgid "Pingbacks"
+msgstr "Pingbacks"
+
+#: functions.php:789
+#@ basis
+msgid "Trackback"
+msgstr "Trackback"
+
+#: functions.php:790
+#@ basis
+msgid "Trackbacks"
+msgstr "Trackbacks"
+
+#: functions.php:797
+#@ basis
+msgid "%"
+msgstr "%"
+
+#: functions.php:799
+#@ basis
+msgid "Keine"
+msgstr "Ingen"
+
+#: functions.php:801
+#@ basis
+msgid "Ein"
+msgstr "&Eacute;n"
+
+#: functions.php:951
+#@ basis
+msgid "Weiterlesen"
+msgstr "Læs videre"
+
+#: header.php:15
+#@ basis
+msgid "Kategorie"
+msgstr "Kategori"
+
+#: header.php:54
+#@ basis
+msgid "Direkt zum Beitrag; Tastaturkuerzel 0"
+msgstr "Direkte til indlæg: Genvejstast 0"
+
+#: header.php:54
+#@ basis
+msgid "&raquo; Direkt zum Beitrag"
+msgstr "&raquo; Direkte til indlæg"
+
+#: image.php:20
+#: index.php:38
+#: page.php:14
+#: single.php:14
+#@ basis
+msgid "Aktualisiert am"
+msgstr "Ændret den"
+
+#: image.php:20
+#: index.php:38
+#: page.php:14
+#: single.php:14
+#@ basis
+msgid "Editieren"
+msgstr "Redigér"
+
+#: image.php:27
+#: index.php:49
+#: page.php:21
+#: search.php:24
+#: single.php:22
+#@ basis
+msgid "Nichts gefunden, was den Suchkriterien entspricht."
+msgstr "Der blev intet fundet, som svarer til søgekriterierne."
+
+#: index.php:13
+#@ basis
+msgid "Archiv f&uuml;r die Kategorie"
+msgstr "Arkiv for kategorien"
+
+#: index.php:15
+#@ basis
+msgid "Tagesarchiv"
+msgstr "Tags-arkiv"
+
+#: index.php:17
+#@ basis
+msgid "Monatsarchiv"
+msgstr "Månedsarkiv"
+
+#: index.php:19
+#@ basis
+msgid "Jahresarchiv"
+msgstr "Årgangsarkiv"
+
+#  feedback
+#: index.php:21
+#: search.php:10
+#, php-format
+#@ basis
+msgid "Die Suche ergab %s Artikel"
+msgstr "Søgningen gav %s artikel/artikler"
+
+#: index.php:23
+#@ basis
+msgid "Archiv zum Autor"
+msgstr "Forfatterarkiv"
+
+#: index.php:25
+#@ basis
+msgid "Archiv f&uuml;r das Schlagwort"
+msgstr "Emnearkiv"
+
+#: index.php:27
+#: sidebar.php:33
+#@ basis
+msgid "Archiv"
+msgstr "Arkiv"
+
+#: index.php:31
+msgid "class=\"post\""
+msgstr "class=\"post\""
+
+#: index.php:37
+#@ basis
+msgid "... weiterlesen &raquo;"
+msgstr "Læs videre &hellip; &raquo;"
+
+#: index.php:40
+#@ basis
+msgid "weiterlesen &raquo;"
+msgstr "Læs videre &raquo;"
+
+#: search.php:16
+#, php-format
+#@ basis
+msgid "Permanent Link to %s"
+msgstr "Permanent link til %s"
+
+#: searchform.php:11
+#@ basis
+msgid "Suche"
+msgstr "Søg"
+
+#: sidebar.php:23
+#@ basis
+msgid "Seiten"
+msgstr "Sider"
+

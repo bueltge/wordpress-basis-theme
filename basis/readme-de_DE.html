@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+	
+	<title>Basis Theme f&uuml;r WordPress &ndash; deutsch</title>
+	<link rel="alternate" type="application/rss+xml" title="Letze Updates" href="http://code.google.com/feeds/p/wp-basis-theme/updates/basic" />
+	<link rel="shortcut icon" href="http://wpbasis.de/favicon.ico" type="image/x-icon" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-language" content="de-DE" />
+
+	<style type="text/css" media="all">
+	/*<![CDATA[*/
+		body{background:#fcfcfc;color:#444;font:normal 70%/150% verdana,geneva,sans-serif;margin:0 2em;padding:0;}
+		body #skipLink{display:block;padding:10px 20px;position:absolute;top:0;left:-999px;}
+		body #skipLink:focus{left:0;}
+		body blockquote{margin-left:0;border-left:5px solid #f6f6f6;padding-left:0.5em;}
+		body code, body pre{font:1em/150% consolas,"courier new", courier, monospace;}
+		body pre{margin-top:0};
+		body div#wrap{background-color:#fff;border-left:3px solid #f9f9f9;border-right:3px solid #f9f9f9;color:#444;margin:0 auto;padding:1em 2em;width:50em;}
+		body div#wrap div#footer{margin:3em auto 1em;text-align:center;}
+		body div#wrap div#footer p{background:#ffd;color:#666;display:inline;padding:0.2em 0.5em;}
+		body div#wrap div#header{margin:0 auto;text-align:center;}
+		body div#wrap div#header p.readme-version{font-size:0.9em;letter-spacing:0.1em;margin:0 0 0.5em;text-transform:uppercase;}
+		body h1{font-size:3.2em;}
+		body h1,body h2,body h3{font-family:garamond,georgia,times,serif;font-weight:400;}
+		body h2{font-size:2em;margin-top:3em;}
+		body h3{font-size:1.6em;margin-top:2em;}
+		body ol li ol li,body ol li#features ol li ol li{list-style:decimal;}
+		body ol li#functions h3{font-size:1.5em;}
+		body ol li#functions ol{list-style:lower-alpha;margin:0 0 0 2em;padding:0;}
+		body ol li#lizenz blockquote a{color:#222;text-decoration:none;}
+		body ol li#lizenz blockquote strong{font-size:0.9em;font-weight:400;text-transform:uppercase;}
+		body ol li,body ol#menu li ol li{list-style:upper-roman;}
+		body ol ul li,body ol ol ul li{list-style:square;}
+		body ol li pre.shell{margin:-0.5em 2.5em 1em 1em;padding:0.2em 0.5em;background:#eee;}
+		body ol#menu li{list-style:none;}
+		body ol#menu li ol li ol li,body ol li#functions ol li,body ol li#features ol li{list-style:lower-roman;}
+		body #funktionen ol li ul {margin:0 0 10px 0; padding-left:20px;}
+		body #funktionen ol li ul li {list-style-type:none;}
+		body pre span,body span.bold{font-weight:700;}
+		body p span.vcard span.family-name,body p span.vcard span.additional-name{display:none;}
+		body p.top{text-align:right;}
+		body div#donate {clear:both; float:right; margin: 2em 0 0 10px; padding: 5px; width:300px; background: #fff; border: 1px solid #444;}
+		body div#donate h2 {margin-top:.5em;}
+		body div#donate .right{float:right;margin:0 0 5px 10px;}
+		table *{border:none;}
+		table tbody th,table tfoot th{background:#ddd;text-align:left;}
+		table tbody tr.alt{background:#eee;}
+		table tr td,table tr th{padding:0.1em 0.5em;}
+	/*]]>*/
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<a id="skipLink" accesskey="0" title="Direkt zum Beitrag, Tastaturkuerzel 0" href="#content">&raquo; Direkt zum Beitrag</a>
+
+		<div id="header">
+			<h1 id="title">WordPress <em>Basis</em> Theme <small>deutsch/<a title="read this in english language" href="readme-en_US.html">english</a></small></h1>
+			<p class="readme-version">Version 1.2.3 <small>(18.03.2010 09:11:28)</small></p>
+			<p>Ein einfaches Theme zum Starten eines neuen WordPress Themes</p>
+		</div>
+		
+		<div id="donate">
+			<h2>Spenden</h2>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="right">
+				<p><input type="hidden" name="cmd" value="_s-xclick" /></p>
+				<p><input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----" /></p>
+				<p><input type="image" src="https://www.paypal.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal." />
+				<img alt="" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" /></p>
+			</form>
+			<p>Ich arbeite viel und oft an diesem Theme um es aktuell zu halten. Ich investiere viel Zeit meiner kostbaren Freizeit in Projekte wie dieses um L&ouml;sungen f&uuml;r WordPress bereit zu stellen. Erm&ouml;gliche mir eine motivierte Arbeit und gib einen Beitrag um die Arbeit an freier Software zu unterst&uuml;tzen. Weitere Arbeiten und L&ouml;sungen sind in meinem Blog bueltge.de zu finden. Alternativ kann man mir eine Freude machen, in dem man die <a href="http://www.amazon.de/gp/registry/3NTOGEK181L23/ref=wl_s_3/275-8347005-6788415">Wunschliste bei Amazon</a> einsieht und mir ein Geschenk zu kommen l&auml;&szlig;t.<br />Ich bin sehr dankbar daf&uuml;r! Danke!</p>
+		</div>
+		
+		<ol id="menu">
+			<li>
+				<h2>Inhalt</h2>
+				<ol>
+					<li><a href="#einleitung" title="Zur Einleitung springen">Einleitung</a></li>
+					<li><a href="#projekt" title="Zu den Projektseiten">Projektseiten</a></li>
+					<li><a href="#aufbau" title="Zur Struktur">Templates/Struktur</a></li>
+					<li><a href="#funktionen" title="Zu den integrierten Funktionen">integrierte Funktionen</a></li>
+					<li><a href="#wp_root_tipps" title="Zu den integrierten Funktionen">Tipps f&uuml;r das WP Hauptverzeichnis</a></li>
+					<li><a href="#css_hint" title="Infos zum Reset des CSS">Hinweise zum Reset des CSS-Stylesheet</a></li>
+					<li><a href="#download" title="Download des Projektes">Download</a></li>
+					<li><a href="#danke" title="Informationen &uuml;ber Quellen">Danke</a></li>
+					<li><a href="#team" title="Die Personen hinter dem kleinen Projekt">Projekt Team</a></li>
+					<li><a href="#lizenz" title="Zum Abspann springen">Lizenz</a></li>
+				</ol>
+			</li>
+		</ol>
+		
+		<ol id="content">
+			
+			<li id="einleitung">
+				<h2>Einleitung</h2>
+				<p><em>Basis</em> ist ein Theme, welches die Erstellung eines neuen Themes f&uuml;r WordPress vereinfachen soll.</p>
+				<p>Wer sich an die Entwicklung eines eigenen Themes macht, der findet mit diesem Basis-Theme einen Einstieg, der sich leicht an die eigenen Bed&uuml;rfnisse anpassen l&auml;&szlig;t.</p>
+				<p>Es liegen eine Reihe unterschiedlicher Templates bei und das Stylesheet ist leer, bis auf die Vereinbarung der IDs und class, die schon Verwendung finden. Das Theme ist Widget-Tauglich und hat eine ganze Reihe von Funktionen, die in der <code>functions.php</code> abgelegt sind. Detaillierte Hinweise in den folgenden Punkten.</p>
+				<h3>Alternative xHTML5</h3>
+				<p>Zus&auml;tzlich ist im <a href="http://code.google.com/p/wp-basis-theme/source/browse/#svn/trunk/basis-html5" title="zur Projektseite">SVN</a> das Projekt als xHTML5 Version vorzufinden.</p>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			<li id="projekt">
+				<h2>Projektseiten</h2>
+				<ul>
+					<li><a href="http://bueltge.de/basis-theme-fuer-wordpress/411/">Blog-Beitrag zum Theme</a></li>
+					<li><a href="http://code.google.com/p/wp-basis-theme/">WordPress Basis Theme SVN bei Google Code</a></li>
+					<li>Folge uns auf Twitter <a href="http://twitter.com/wpbasis">@wpbasis</a></li>
+				</ul>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			<li id="aufbau">
+				<h2>Templates/Struktur</h2>
+				<ul>
+					<li><strong>Theme Basis</strong>
+					<ul>
+						<li><em>layout</em>
+							<ul>
+								<li><em>css</em>
+									<ul>
+										<li><em>reset</em>
+											<ul>
+												<li>plugins
+													<ul>
+														<li>tripoli.layout.css</li>
+														<li>tripoli.negative.css</li>
+														<li>tripoli.type.css</li>
+														<li>tripoli.visual.css</li>
+													</ul>
+												</li>
+												<li>yui
+													<ul>
+														<li>reset.css</li>
+														<li>reset-min.css</li>
+													</ul>
+												</li>
+												<li>css-reset.css</li>
+												<li>reset.css</li>
+												<li>tripoli.base.css</li>
+												<li>tripoli.base.ie.css</li>
+												<li>tripoli.css</li>
+												<li>tripoli.ie.css</li>
+												<li>tripoli.simple.css</li>
+												<li>tripoli.simple.ie.css</li>
+											</ul>
+										</li>
+										<li>ie.css</li>
+										<li>print.css</li>
+										<li>single.css</li>
+										<li>style.css</li>
+									</ul>
+								</li>
+								<li><em>images</em></li>
+							</ul>
+						</li>
+						<li><em>custom-login</em>
+							<ul>
+								<li>custom-login.css</li>
+							</ul>
+						</li>
+						<li><em>extra</em>
+							<ul>
+								<li>db-error.php</li>
+							</ul>
+						</li>
+						<li><em>js</em>
+							<ul>
+								<li>quicktags.js</li>
+							</ul>
+						</li>
+						<li><em>wp-root-tipps</em>
+							<ul>
+								<li>.htaccess</li>
+								<li>robots.txt</li>
+								<li>wp-config.php</li>
+							</ul>
+						</li>
+						<li>style.css</li>
+						<li>404.php</li>
+						<li>blog.php</li>
+						<li>comments.php</li>
+						<li>footer.php</li>
+						<li>functions.php</li>
+						<li>header.php</li>
+						<li>image.php</li>
+						<li>index.php</li>
+						<li>page.php</li>
+						<li>search.php</li>
+						<li>searchform.php</li>
+						<li>sidebar.php</li>
+						<li>single.php</li>
+						<li>screenshot.png</li>
+						<li>xx_XX.pot</li>
+						<li>os.xml</li>
+						<li>license.txt</li>
+					</ul>
+					</li>
+				</ul>
+			</li>
+			
+
+			<li id="funktionen">
+				<h2>integrierte Funktionen</h2>
+				<ol>
+					<li><strong>WordPress Konstanten</strong>
+						<ul>
+							<li>WordPress arbeitet vorallem seit Version 2.6 sehr stark mit Konstanten, was die Zugriffe und die Entwicklung erleichtert. Es werden die notwendigen Konstanten gepr&uuml;ft und ggf. gesetzt, wenn sie nicht existent sind</li>
+						</ul>
+					</li>
+					<li><strong>fb_textdomain</strong>
+							<ul>
+								<li>Erm&ouml;glicht die Mehhsprachigkeit von Themes.</li>
+							<li>Es kann lediglich der Schl&uuml;ssel 'basis' in <code>define( 'FB_BASIS_TEXTDOMAIN', 'basis' );</code> umbenannt werden. Alle anderen Schl&uuml;ssel werden automatisch &uuml;ber die Konstante gezogen.</li>
+							</ul>
+					</li>
+					<li><strong>wp_count_posts</strong>, <strong>wp_count_terms</strong>, <strong>get_comment_count</strong>, <strong>wp_count_comments</strong>
+							<ul>
+								<li>z&auml;hlt die Beitr&auml;ge im Blog</li>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/summe-beitraege-seiten-kategorien-tags-kommentare-wordpress-theme/744/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>Widget Unterst&uuml;tzung</strong>
+							<ul>
+								<li>In WordPress gibt es eine M&ouml;glichkeit, neue Funktionen in die Oberfl&auml;che zu integrieren, ohne manuell in den Code einer Template-Datei eingreifen zu m&uuml;ssen. Das Aktivieren und Positionieren wird per Drag&amp;Drop erledigt. Dies erleichtert dem Anwender das Anpassen des Sidebar an die pers&ouml;nlichen Anforderungen enorm. Diese Technologie nennt man Widget.</li>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/10-punkte-perfekte-wordpress-theme/784/#widget">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>&Auml;hnliche Beitr&auml;ge von Tags</strong> <code>fb_get_related_posts()</code>
+							<ul>
+								<li>&Auml;hnliche Beitr&auml;ge zum ggw. Beitrag auf Basis der Tags</li>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/aehnliche-beitraege-mit-tag-funktion-wordpress-23/531/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>&Auml;hnliche Beitr&auml;ge auf Basis Kategorie</strong> <code>fb_get_cat_related_posts()</code>
+							<ul>
+								<li>&Auml;hnliche Beitr&auml;ge zum ggw. Beitrag auf Basis der Kategorie</li>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/aehnliche-seiten-auf-basis-der-kategorie-in-wordpress/967/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>fb_in_category</strong>
+							<ul>
+								<li>Wenn ein Beitrag aus einer Unterkategorie ist, dann wird TRUE zur&uuml;ckgegeben.</li>
+							</ul>
+					</li>	
+					<li><strong>get_children_pages</strong>
+							<ul>
+								<li>Liefert die Seiten zu einer Oberseite zur&uuml;ck.</li>
+							</ul>
+					</li>
+					<li><strong>Themespezifisches Login</strong> <code>fb_custom_login()</code>
+							<ul>
+								<li>F&uuml;r ein personalisiertes Loginformular, wird mit dem Hook <pre>add_action('login_head', 'fb_custom_login');</pre> die CSS Datei "custom-login.css" aus dem Ordner <strong>custom-login</strong> eingebunden. Die daf&uuml;r n&ouml;tige Datei und der Ordner liegen dem Theme bei.</li>
+								<li>mehr Informationen in den Beitr&auml;gen <a href="http://bueltge.de/wordpress-27-login-design-anpassen/846/">1</a> und <a href="http://bueltge.de/wordpress-25-und-theme-definiertes-login/617/">2</a></li>
+							</ul>
+					</li>
+					<li><strong>Breadcrumb Navigation</strong> <code>fb_breadcrumb_nav()</code>
+							<ul>
+								<li>Um das <em>WordPress Basis Theme</em> um eine Breadcrumb Navigation (Brotkrumen Navigation) zu erweitern, binde den folgenden Code an die entsprechende Stelle ein:</li>
+								<li><pre>if ( function_exists('fb_breadcrumb_nav') ) fb_breadcrumb_nav();</pre></li>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/brotkrumen-navi-fuer-wordpress/701/">Beitrag</a></li>	
+							</ul>
+					</li>
+					<li><strong>Werbung via benutzerdefinierten Feldern</strong> <code>fb_example_link()</code>
+							<ul>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/werbung-shortcode-benutzerdefinierte-felder-wordpress/741/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>Beitr&auml;ge direkt in Beitrag/Seite ausgeben, via Shortcode</strong> <code>fb_get_posts()</code>
+							<ul>
+								<li>Der Loop von WP direkt in einem Beitrag/Seite mit Hilfe der Shortcodes</li>
+								<li>Ein einfaches Beispiel, mehr nicht</li>
+								<li>Beispiel Shortcode f&uuml;r die 2 Parameter: <code>[posts num="5" cat="1"]</code></li>
+							</ul>
+					</li>
+					<li><strong>Shortcodes f&uuml;r verschl&uuml;sselte E-Mail-Adresse</strong> <code>fb_secure_mail()</code>
+							<ul>
+								<li>Verschl&uuml;sselt die Mail-Adresse mit Hilfe der Unicode-Codierung</li>
+								<li>mehr Informationen zur Idee in diesem <a href="http://bueltge.de/spamschutz-email-utf-8-kodieren/183/">Beitrag</a></li>
+								<li>mehr Informationen zum Shortcode in diesem <a href="http://wpengineer.com/wordpress-antispambot/">Beitrag</a></li>
+								<li>Beispiel Shortcode f&uuml;r die 2 Parameter: <code>[sm mailto="foo@bar.com" txt="here is my mail"]</code></li>
+							</ul>
+					</li>
+					<li><strong>Shortcodes inaktiv in Beitrag/Seite schalten</strong> <code>fb_kill_shortcodes()</code>
+							<ul>
+								<li>L&ouml;scht alle Shortcodes in Beitrag/Seite</li>
+								<li>Shortcode: <code>[KSC][/KSC]</code></li>
+							</ul>
+					</li>
+					<li><strong>Shortcodes in Widgets aktivieren</strong>
+							<ul>
+								<li>Dazu ist die Aktiverung der Standardfunktion via Hook n&ouml;tig.</li>
+								<li><code>add_filter('widget_text', 'do_shortcode');</code></li>
+							</ul>
+					</li>
+					<li><strong>Auslesen der User IP</strong> <code>fb_getUserCountry()</code>
+							<ul>
+								<li>gibt dass Land zur&uuml;ck, wo die IP her ist</li>
+							</ul>
+					</li>
+					<li><strong>Cachen der CSS Dateien</strong> <code>fb_css_cache_buster()</code>
+							<ul>
+								<li>mehr Informationen in diesem <a href="http://toscho.de/2008/frisches-layout/#comment-13">Kommentar</a></li>
+							<li>alternativ via <a href="http://www.alistercameron.com/2008/09/12/wordpress-plugin-css-cache-buster/">Plugin</a></li>
+							</ul>
+					</li>
+					<li><strong>Tagcloud als Dropdown-Men&uuml;</strong> <code>fb_dropdown_tag_cloud()</code>
+							<ul>
+								<li>Tags im Dropdown-menu</li>
+							</ul>
+					</li>
+					<li><strong>Kategorien aus Loop filtern</strong> <code>fb_exclude_category()</code>
+							<ul>
+								<li>IDs der Kategorien im Array vergeben und sie sind nicht mehr im Loop zu finden</li>
+							</ul>
+					</li>
+					<li><strong>Entfernen von <code>/category/</code> zu besseren Suchmaschinenoptimerung</strong> <code>fb_fix_slash()</code>
+							<ul>
+								<li>Entfernt <code>/category/</code> aus den Permalinks</li>
+							</ul>
+					</li>
+					<li><strong>Add Link Attribute</strong>
+							<ul>
+								<li>F&uuml;gt Attribute zum Link-Tag hinzu.</li>
+							</ul>
+					</li>
+					<li><strong>Regular Expression f&uuml;r Links</strong> <code>fb_add_thickbox()</code>
+							<ul>
+								<li>F&uuml;gt Links mit Bilddateien eine Klasse hinzu, die das &Ouml;ffnen mit Thickbox erm&ouml;glichen</li>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/javascript-bibliotheken-in-und-aus-wordpress-nutzen/808/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>Zeitverz&ouml;gertes Ver&ouml;ffentlichen der Beitr&auml;ge im Feed</strong> <code>fb_pulish_later_on_feed()</code>
+							<ul>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/wordpress-feed-zeitversetzt-befuellen/806/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>Kein Pingen der eigenen Beitr&auml;ge</strong> <code>fb_noself_ping()</code>
+							<ul>
+								<li>Verhindert das l&auml;stige Pingen der eigenen Beitr&auml;ge im Blog.</li>
+							</ul>
+					</li>
+					<li><strong>Markup der Kommentare</strong> <code>fb_theme_comment()</code>
+							<ul>
+								<li>Gibt das Markup und Inhalt des einzelnen Kommentars zur&uuml;ck</li>
+							</ul>
+					</li>
+					<li><strong>Kommentare, Pings und Trackbacks z&auml;hlen <code>fb_comment_type_count()</code></strong>
+							<ul>
+								<li>mehr Informationen in diesem <a href="http://bueltge.de/zaehler-fuer-kommentare-track-und-pingbacks-ab-wordpress-27/878/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>Pr&uuml;fung f&uuml;r doppelten meta-robots tag</strong> <code>fb_comment_paging_noindex_meta()</code>
+							<ul>
+								<li>Verhindert Double Content bei Pagination von Kommentaren</li>
+								<li>mehr Informationen in diesem <a href="http://blog.kaizeku.com/wordpress/prevent-wordpress-27-duplicate-content/">Beitrag</a></li>
+							</ul>
+					</li>
+					<li><strong>Werbung nur f&uuml;r Besucher von Suchmaschinen zeigen</strong> <code>fb_fromasearchengine()</code>
+							<ul>
+								<li>Mithilfe dieser Funktion lassen sich Werbebanner oder Textlinks auf Besuchergruppen von Suchmaschinen eingrenzen. Der Funktionsaufruf <code>fb_fromasearchengine()</code> wertet den Referrer jedes Besuchers aus und weitere Suchmaschinen k&ouml;nnen individuell in der functions.php des Themes erweitert werden.</li>
+								<li><em>Beispiel:</em><pre>if ( function_exists('fb_fromasearchengine') ) { 
+	if ( fb_fromasearchengine() ) {
+		PLATZHALTER FÜR HTML-/BANNER-CODE etc.
+	} 
+}</pre></li>
+							</ul>
+					</li>
+					<li><strong>Entfernen des <em>more</em> Tags</strong> <code>fb_remove_more_anchor()</code>
+						<ul>
+							<li>L&ouml;scht den more-Tag im Content.</li>
+							<li>Aktiviere dazu in der <code>functions.php</code> den Hook <code>add_filter('the_content', 'fb_remove_more_anchor');</code></li>
+						<li><em>Hinweis:</em> Um den more-Tag nicht zu beachten, kann man auch im Template des Themes die Variable <code>$more</code> nutzen und entsprechend setzen: <code>global $more; $more = 1;</code></li>
+						</ul>
+					</li>
+					<li><strong>automatisches L&ouml;schen der Kommentardaten</strong> <code>fb_delete_comments_data()</code>
+						<ul>
+							<li>Es werden mit der Funktion <code>fb_delete_comments_data()</code> automatisiert alle Kommentardaten der letzten 15 Tage gel&ouml;scht. Dieser Automatismus verringert die Gr&ouml;&szlig;e der Datenbank und sch&uuml;tzt gegen zuk&uuml;nftige Probleme in Bezug auf die Datenschutzbedingungen Deutschlands.</li>
+						</ul>
+					</li>
+					<li><strong>Alternativer Doctype</strong> <code>fb_alternate_doctype()</code>
+						<ul>
+							<li>Diverse Anforderungen erwarten es, dass man in verschiedenen Seiten einen alternativen Doctype benutzen muss. Die Funktion erm&ouml;glicht das und &uuml;bergibt als Doctype den Wert in der Variable <code>$newdoctype</code>.</li>
+							<li>Der Aufruf kann einfach in einem Template genutzt werden und so speziell auf eine bestimmte Anforderung mit Hilfe der Conditional Tags genutzt werden.</li>
+							<li><em>Beispiel:</em> <pre>if ( is_page('about') ) fb_alternate_doctype(); </pre></li>
+						</ul>
+					</li>
+					<li><strong>TinyURL erstellen</strong> <code>fb_gettinyurl()</code>
+						<ul>
+							<li>Einfache Funktion zum Erstllen einer TinyURL mit Hilfe der API von TinyURL.com</li>
+							<li>mehr Informationen in diesem <a href="http://www.rene-ade.de/inhalte/php-code-zum-erstellen-einer-tinyurl-ueber-tinyurl-com-api.html">Beitrag</a> von Ren&eacute; Ade</li>
+						</ul>
+					</li>
+					<li><strong>Filter Rewrite rule</strong> <code>fb_filter_rewrite_attachment()</code>
+						<ul>
+							<li>Kann die Performance steigern, wenn ung&uuml;nstige Permalinks aktiviert sind</li>
+							<li>Der Inhalt kann via <code>var_dump( get_option('rewrite_rules') );</code> ausgeben werden</li>
+							<li>Zum Nutzen einfach die beiden Filter auskommentieren</li>
+						</ul>
+					</li>
+					<li><strong>Useragent pr&uuml;fen</strong> <code>fb_agent()</code>
+						<ul>
+							<li>Auf Useragent pr&uuml;fen und entsprechend reagieren</li>
+							<li>beispielsweise um Stylesheets f&uuml;r bestimmte mobile Clients zu laden</li>
+							<li><em>Beispiel:</em> <pre>if ( (fb_agent("iPhone") != FALSE) || (fb_agent("iPod") != FALSE) ) {
+	...
+}</pre></li>
+						</ul>
+					</li>
+					<li><strong>Tags zum Post</strong> <code>fb_meta_tags()</code>
+						<ul>
+							<li>Liest die Tags zum Post aus und gibt sie als keywords zum Meta-Tag aus.</li>
+							<li><em>Beispiel:</em> <pre>&lt;?php if (function_exists('fb_meta_tags') ) { fb_meta_tags(); } ?&gt;</pre></li>
+							<li><em>Ausgabebeispiel:</em> <pre>&lt;meta name=&quot;keywords&quot; content=&quot;test,bueltge,&quot; /&gt;</pre></li> 
+						</ul>
+					</li>
+					<li><strong>Excerpt filtern</strong> <code>fb_clean_excerpt()</code>
+						<ul>
+							<li>zeigt beispielhaft das Filtern von JavaScript und CSS im Excerpt</li>
+						</ul>
+					</li>
+					<li><strong>Excerpt filtern 2</strong> <code>fb_trim_excerpt()</code>
+						<ul>
+							<li>entfernt [...] aus dem excerpt oder setzt eine Alternative</li>
+						</ul>
+					</li>
+					<li><strong>nofollow-Attribut im Kommentar-Autor-Link filtern</strong> <code>fb_strip_nofollow()</code>
+						<ul>
+							<li>entfernt das <code>nofollow</code>-Attribut aus dem Link des Kommentar-Autors</li>
+						</ul>
+					</li>
+					<li><strong>Pr&uuml;fe Seite und Unterseiten</strong> <code>fb_has_parent()</code>
+							<ul>
+								<li>Pr&uuml;ft, ob die aktuelle Seite, oder deren Unterseiten der ID entspricht bzw. zugeh&ouml;rt.</li>
+								<li><pre>if ( function_exists('fb_has_parent') ) {
+	if ( fb_has_parent($wp_query->post, 3) ) { ... }
+} ;</pre></li>
+							</ul>
+					</li>	
+					<li><strong>Weiterleitung seitens WP deaktivieren</strong> <code>template_redirect</code>
+						<ul>
+							<li>Entfernt die Funktion der Canonical URL, seit WP 2.3 im System</li>
+							<li>Zum Aktivieren den Hook auskommentieren</li>
+						</ul>
+					</li>
+					<li><strong>Kontaktfeld hinzuf&uuml;gen</strong> <code>fb_add_twitter_contactmethod</code>
+						<ul>
+							<li>F&uuml;gt ein Feld zu den User-Einstellungen im Backend hinzu, seit WP 2.9 im System</li>
+							<li>Beispiel: <code>add_filter( 'user_contactmethods', 'fb_add_twitter_contactmethod', 10, 1 )</code></li>
+						</ul>
+					</li>
+					<li><strong>User mit einer speziellen Rolle w&auml;hlen</strong> <code>fb_getUsersByRole</code>
+						<ul>
+							<li>R&uuml;ckgabe der User-IDs f&uuml;r eine Rolle, die man im Parameter $role &uuml;bergibt</li>
+							<li>Beispiel: <code>$userid = fb_getUsersByRole( 'author' )</code></li>
+						</ul>
+					</li>
+					<li><strong>Entfert typographische "widows" in Seitentiteln</strong> <code>fb_getUsersByRole</code>
+						<ul>
+							<li>Ein "widow" ist in der Typographie ein kleines Wort, welches auf einer Zeile dargestellt werden.</li>
+							<li>Die Funktion filtert die letzten W&ouml;rter so, dass für Leerzeichen das <code>&amp;nbsp;</code> übergeben wird.</li>
+							<li>Mit diesem Trick stellen Browser keinen Break dar.</li>
+						</ul>
+					</li>
+					
+				</ol>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			
+			<li id="wp_root_tipps">
+			<h2>Tipps f&uuml;r das WP Hauptverzeichnis</h2>
+				<p>F&uuml;r eine reibungslose und sichere Installation liegen dem <em>WordPress Basis Theme</em> eine modifizierte</p><ul>
+					<li>wp-config.php,</li>
+					<li>robots.txt und eine</li>
+					<li>.htaccess bei.</li>
+				</ul>
+				<p>Entscheide selbst &uuml;ber die Ideen und L&ouml;sungen in diesen Dateien oder Suche im Netz nach Erkl&auml;rungen.</p>
+				
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			<li id="css_hint">
+				<h2>Hinweise zum Reset des Stylesheet</h2>
+				<p>Das Theme beinhaltet verschidene M&ouml;glichkeiten um das Stylesheet der Browser auf einene gemeinsamen Stand zu setzen. Entscheide dich f&uuml;r eine L&ouml;sung und nutze die Links um mehr &uuml;ber die unterschiedlichen Ans&auml;tze das interne Stylesheet der Browser auf einen gemeinsamen Standard zu setzen.</p>
+				
+				<ol>
+					<li>
+						<h3>CSS Framework Tripoli</h3>
+					<p>Das im <em>WordPress Basis Theme</em> zur Verwendung inkludierte <em>CSS Framework Tripoli</em> vereinheitlicht die Darstellung der CSS Befehle vom Browser Internet Explorer 5 bis zum Firefox 3. Die Idee wurde umgesetzt von David Hellsing.</p>
+						<ul>
+							<li><em>Webseite:</em> <a href="http://devkick.com/lab/tripoli/">CSS Framework Tripoli</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Reset CSS von Eric Meyer</h3>
+						<p>Die Reset CSS von Eric Meyer setzt alle internen Browserstyles zur&uuml;ck und ben&ouml;tigt eine komplett neue Definition der dort enthaltenen Stile.</p>
+						<p>The reset styles given here are intentionally very generic. There isn't any default color or background set for the body element, for example. I don't particularly recommend that you just use this in its unaltered state in your own projects. It should be tweaked, edited, extended, and otherwise tuned to match your specific reset baseline. Fill in your preferred colors for the page, links, and so on. </p>
+						<ul>
+							<li><em>Webseite:</em> <a href="http://meyerweb.com/eric/tools/css/reset/">CSS Tools: Reset CSS</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Yahoo User Interface Reset</h3>
+						<p>The foundational YUI Reset CSS file removes and neutralizes the inconsistent default styling of HTML elements, creating a level playing field across A-grade browsers and providing a sound foundation upon which you can explicitly declare your intentions.</p>
+						<ul>
+							<li><em>Webseite:</em> <a href="http://developer.yahoo.com/yui/reset/">Yahoo User Interface Reset</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Ed Eliot&acute;s Reset - Weniger ist mehr</h3>
+						<p>Viele Reset-CSS gehen einfach zu weit. Eliot&acute;s L&ouml;sung beachtet nur ein Auswahl an Elementen, die eine sehr h&auml;ufige Nutzung haben.</p>
+						<ul>
+							<li><em>Webseite:</em> <a href="http://www.ejeliot.com/blog/85">Ed Eliot&acute;s Reset</a></li>
+						</ul>
+					</li>
+					<li>
+						<h3>Kurz und Schlank</h3>
+						<pre>* {
+margin: 0;
+padding: 0;	
+}</pre>
+					</li>
+				</ol>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			<li id="download">
+				<h2>Download</h2>
+				<ul>
+					<li>Das Projekt wird auf Google Code <a href="http://wp-basis-theme.googlecode.com/">WP Basis Theme</a> verwaltet, ebenso der Download.</li>
+					<li>Download URL WP Basis xHTML1.0: <a href="http://wp-basis-theme.googlecode.com/files/wpbasis.zip">http://wp-basis-theme.googlecode.com/files/wpbasis.zip</a></li>
+					<li>Download URL WP Basis Child Theme Example: <a href="http://wp-basis-theme.googlecode.com/files/wpbasis-child-example.zip">http://wp-basis-theme.googlecode.com/files/wpbasis-child-example.zip</a></li>
+					<li>Download URL WP Basis HTML5: <a href="http://wp-basis-theme.googlecode.com/files/wpbasis-html5.zip">http://wp-basis-theme.googlecode.com/files/wpbasis-html5.zip</a></li>
+					<li>Download List URL: <a href="http://code.google.com/p/wp-basis-theme/downloads/list">http://code.google.com/p/wp-basis-theme/downloads/list</a></li>
+				</ul>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			<li id="danke">
+				<h2>Danke</h2>
+				<ul>
+					<li><a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyer</a> f&uuml;r seine Reset-CSS</li>
+					<li><a href="http://meyerweb.com/eric/tools/css/reset/">Yahoo! UI Library: Reset CSS</a> f&uuml;r seine Reset-CSS</li>
+					<li><a href="http://devkick.com/lab/tripoli/">David Hellsing</a> f&uuml;r seine Idee zum Generieren eines Standard-CSS</li>
+					<li><a href="http://www.ejeliot.com/blog/85">Ed Eliot&acute;s Reset</a> f&uuml;r eine weitere schlanke Idee</li>
+					<li>den vielen Kommentaren, Artikeln und B&uuml;chern zum Thema</li>
+				</ul>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			<li id="team">
+				<h2>Projekt Team</h2>
+				<ul>
+					<li>Idee &amp; Haupt&ndash;Entwickler: Frank B&uuml;ltge, <a href="http://bueltge.de/">bueltge.de</a></li>
+					<li>Unterst&uuml;tzer in Syntax &amp; Tests: Andreas Isaak, <a href="http://andreas-isaak.de/">andreas-isaak.de</a></li>
+					<li>Unterst&uuml;tzer in Syntax &amp; Tests: Dominik, <a href="http://dominikschilling.de/">dominikschilling.de</a></li>
+					<li>Unterst&uuml;tzer bei English in Wort und Schrift: Caspar H&uuml;binger, <a href="http://casparhuebinger.de">casparhuebinger.de</a></li>
+					<li>Unterst&uuml;tzer bei English in Wort und Schrift: Alex Frison, <a href="http://alexfrison.com/">alexfrison.com</a></li>
+				</ul>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+			
+			<li id="lizenz">
+				<h2>Lizenz</h2>
+				<p>Basis Theme &copy; 2007 &ndash; 2009 ist lizensiert unter <a href="http://www.gnu.org/licenses/gpl.html" title="GNU General Public License" rel="license"><abbr title="GNU is Not Unix">GNU</abbr> General Public License</a>:</p>
+				<blockquote title="How to use the GPL or LPGL" cite="http://www.gnu.org/licenses/gpl-howto.html">
+					<p>This program is free software; you can redistribute it and/or modify it under the terms of the <abbr title="GNU is Not Unix">GNU</abbr> General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.</p>
+					<p>This program is distributed in the hope that it will be useful, but <strong>without any warranty</strong>; without even the implied warranty of <strong>merchantability</strong> or <strong>fitness for a particular purpose</strong>. See the <abbr title="GNU is Not Unix">GNU</abbr> General Public License for more details.</p>
+					<p>You should have received a copy of the <abbr title="GNU is Not Unix">GNU</abbr> General Public License along with this program; if not, write to the <span class="vcard"><a class="url fn org" href="http://www.fsf.org/" rel="external">Free Software Foundation, Inc</a>, <span class="adr"><span class="street-address">51 Franklin Street, Fifth Floor</span>, <span class="locality">Boston</span>, <span class="region">MA</span> <span class="postal-code">02110-1301</span>, <span class="country-name">USA</span></span></span>.</p>
+				</blockquote>
+				<p class="top"><a href="#wrap" title="auf nach oben">&nbsp;&uarr;&nbsp;</a></p>
+			</li>
+
+		</ol>
+		
+		<div id="footer">
+			<p>Letzte Aktualisierung: 18.03.2010 09:11:28 &middot; <a href="http://bueltge.de/impressum/">Impressum</a></p>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

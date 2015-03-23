@@ -1,0 +1,23 @@
+/*
+ *   Tripoli is a generic CSS standard for HTML rendering. 
+ *   Copyright (C) 2007 David Hellsing
+ *   
+ *   http://devkick.com/lab/tripoli/
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+**/
+
+/*
+_______________________________
+BASE */
+
+@import 'tripoli.base.ie.css';
+
+/*
+_______________________________
+PLUGINS */
+
+/*
+_______________________________
+END */

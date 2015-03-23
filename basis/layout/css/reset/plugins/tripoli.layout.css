@@ -1,0 +1,302 @@
+/*
+ *   @name layout
+ *   @type tripoli plugin
+ *
+ *   @desc Quick and ready-to-use CSS layout templates.
+ *         Full browser support from IE5/WIN and IE5/OSX.
+ *         Content first - same HTML markup in all layouts.
+ *         Two fixed widths using em (normal or wide).
+ *         Equal columns option (experimental - ignored by IE5/osx and Opera < 9. Buggy in IE5/win).
+ * 
+ *   @author David Hellsing
+ *   @version 1.0
+ *   @cat plugins
+ *
+ *
+ *   @example layout: <body class="l2">
+ *   @desc creates a layout with two columns (33%-66%)
+ *
+ *   @example layout: <body class="l4 wide equal">
+ *   @desc creates a wide layout with three equal height columns (33%-33%-33%)
+ *
+ *   @documentation layout body classes:
+ *
+ *     .l1: 2-column 66% - 33%
+ *     .l2: 2-column 33% - 66%
+ *     .l3: 2-column 50% - 50%
+ *     .l4: 3-column 33% - 33% - 33%
+ *     .l5: 3-column 16% - 66% - 16%
+ *     .l6: 3-column 25% - 50% - 25%
+ *     .l7: 3-column 66% - 16% - 16%
+ *     .l8: 3-column 50% - 25% - 25%
+ *     .l9: 3-column 25% - 25% - 50%
+ *     
+ *     .wide:  125% width
+ *     .equal: equal columns
+ *     
+ *   @documentation html structure:
+ *   
+
+<body class="[layout classes]">
+<div id="container">
+	<div id="header">
+		<div class="content"><!-- header content --></div>
+	</div>
+	<div id="primary">
+		<div class="content"><!-- primary content --></div>
+	</div>
+	<div id="secondary">
+		<div class="content"><!-- secondary content --></div>
+	</div>
+	<div id="tertiary">
+		<div class="content"><!-- tertiary content --></div>
+	</div>
+	<div id="footer">
+		<div class="content"><!-- footer content --></div>
+	</div>
+</div>
+</body>
+
+**/
+
+* html body
+{
+	text-align:center;
+}
+
+#container
+{
+	position:relative;
+	width:76em;
+	text-align:left;
+	margin:0 auto;
+}
+
+#header
+{
+	position:relative;
+}
+
+#primary,#secondary,#tertiary
+{
+	position:relative;
+	float:left;
+}
+
+* html #primary,* html #secondary,* html #tertiary
+{
+	display:inline;
+}
+
+#footer
+{
+	clear:both;
+	float:left;
+	width:100%;
+	position:relative;
+}
+
+body.l1 #tertiary,body.l2 #tertiary,body.l3 #tertiary
+{
+	display:none;
+}
+
+body.l1 #primary
+{
+	width:49.5em;
+}
+
+body.l1 #secondary
+{
+	width:24.5em;
+	float:right;
+}
+
+body.l2 #primary
+{
+	width:49.5em;
+	margin-left:26.5em;;
+}
+
+body.l2 #secondary
+{
+	width:24.5em;
+	margin-left:-76em;
+}
+
+body.l3 #primary
+{
+	width:37em;
+}
+
+body.l3 #secondary
+{
+	width:37em;
+	float:right;
+}
+
+body.l4 #primary
+{
+	width:24em;
+	margin-left:26em;
+}
+
+body.l4 #secondary
+{
+	width:24em;
+	margin-left:-50em;
+}
+
+body.l4 #tertiary
+{
+	float:right;
+	width:24em;
+}
+
+body.l5 #primary
+{
+	width:48em;
+	margin-left:14em;
+}
+
+body.l5 #secondary
+{
+	width:12em;
+	margin-left:-62em;
+}
+
+body.l6 #primary
+{
+	width:36em;
+	margin-left:20em;
+}
+
+body.l6 #secondary
+{
+	width:18em;
+	margin-left:-56em;
+}
+
+body.l7 #primary
+{
+	width:48em;
+	margin-right:2em;
+}
+
+body.l7 #secondary
+{
+	width:12em;
+}
+
+body.l8 #primary
+{
+	width:36em;
+	margin-right:2em;
+}
+
+body.l8 #secondary
+{
+	width:18em;
+	margin-left:0;
+}
+
+body.l9 #primary
+{
+	width:36em;
+	float:right;
+}
+
+body.l9 #secondary
+{
+	width:18em;
+}
+
+body.l9 #tertiary
+{
+	float:right;
+	width:18em;
+	margin-right:2em;
+}
+
+body.wide #container
+{
+	font-size:125%;
+}
+
+body.wide #header
+{
+	font-size:80%;
+}
+
+body.wide #footer
+{
+	font-size:81%;
+}
+
+body.wide #primary .content,body.wide #secondary .content,body.wide #tertiary .content
+{
+	font-size:100%;
+	line-height:1.54;
+}
+
+/* \*/
+
+body.equal #container
+{
+	overflow:hidden;
+	padding-bottom:0;
+}
+
+body.equal #primary,body.equal #secondary,body.equal #tertiary
+{
+	margin-bottom:-32767px;
+	padding-bottom:32767px;
+}
+
+* html body.equal #container
+{
+	padding-bottom:0;
+}
+
+/* */
+
+body.l1 #footer,body.l2 #footer,body.l3 #footer
+{
+	margin-bottom:0;
+}
+
+body.l5 #tertiary,body.l7 #tertiary
+{
+	float:right;
+	width:12em;
+}
+
+body.l6 #tertiary,body.l8 #tertiary
+{
+	float:right;
+	width:18em;
+}
+
+@media all and (min-width: 0px)
+{
+	body.l2 #secondary
+	{
+		left:.5em;
+	}
+	
+	body.equal #primary,body.equal #secondary,body.equal #tertiary
+	{
+		padding-bottom:0!important;
+		margin-bottom:0!important;
+	}
+	
+	body.equal #primary[id^="primary"]:before,body.equal #secondary[id^="secondary"]:before,body.equal #tertiary[id^="tertiary"]:before
+	{
+		content:'Q';
+		display:block;
+		background:inherit;
+		padding-top:32767px!important;
+		margin-bottom:-32767px!important;
+		height:0;
+	}
+}

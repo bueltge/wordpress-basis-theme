@@ -1,0 +1,36 @@
+/*
+ *   @name type
+ *   @type tripoli plugin
+ *
+ *   @desc adds typographic classes.
+ *   @author David Hellsing
+ *   @version 1.0
+ *   @cat plugins
+ *
+ *   @example <span class="alt">&amp;</span>
+ *   @desc create attractive ampersands
+ *
+ *   @example <h1><span class="dquo">&#8220;</span>Level 1 heading&#8221;</h1>
+ *   @desc move the first quote mark in titles to render outside the hoizontal base line.
+ * 
+**/
+
+/*
+_______________________________
+TYPE PLUG */
+
+.alt
+{ 
+	font-family:"baskerville italic","Warnock Pro","Goudy Old Style","Palatino","palatino linotype","Book Antiqua",Georgia, serif; 
+	font-style:italic;
+	font-weight:normal;
+}
+   
+.dquo
+{
+	margin-left:-.55em;
+}
+
+/*
+_______________________________
+END */

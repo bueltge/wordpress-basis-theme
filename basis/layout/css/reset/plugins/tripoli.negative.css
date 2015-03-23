@@ -1,0 +1,104 @@
+/*
+ *   @name type
+ *   @type tripoli plugin
+ *
+ *   @desc use in negative layouts together with the visual plugin.
+ *   @author David Hellsing
+ *   @version 1.0
+ *   @cat plugins
+ *
+ * 
+**/
+
+html
+{
+	background:black;
+	color:white;
+}
+
+ins,dfn
+{
+	border-bottom-color:#555;
+	color:#fff;
+}
+
+del
+{
+	color:#ccc;
+}
+
+kbd
+{
+	border-color:#333;
+}
+
+abbr,acronym,abbr[title],acronym[title]
+{
+	border-bottom-color:#555;
+}
+
+blockquote
+{
+	border-top-color:#555;
+	border-bottom-color:#555;
+	color:#bbb;
+}
+
+legend
+{
+	background-color:#000;
+}
+
+textarea,input[type='text'],select
+{
+	background:#000;
+	color:#fff;
+	border-color:#555;
+}
+
+textarea:hover,input[type='text']:hover,select:hover
+{
+	border-color:#666;
+}
+
+textarea:focus,input[type='text']:focus,input[type='password']:focus,select:focus
+{
+	outline-color:#444;
+	border-color:#888;
+}
+
+.content a:link
+{
+	color:#69f;
+}
+
+.content a:visited
+{
+	color:#ccf;
+}
+
+.content hr
+{
+	color:#555;
+	background-color:#555;
+}
+
+* html option
+{
+	color:black;
+}
+
+fieldset,.content table,.content th,.content td
+{
+	border-color:#555;
+}
+
+option,.content a:active,.content a:focus
+{
+	color:#fff;
+}
+
+.content a:hover,.content code,.content pre
+{
+	color:#e66;
+}

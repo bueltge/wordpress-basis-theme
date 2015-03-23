@@ -1,0 +1,188 @@
+AddDefaultCharset UTF-8
+
+<IfModule mod_deflate.c>
+ AddOutputFilterByType DEFLATE text/plain
+ AddOutputFilterByType DEFLATE text/html
+ AddOutputFilterByType DEFLATE text/xml
+ AddOutputFilterByType DEFLATE text/css
+ AddOutputFilterByType DEFLATE text/javascript
+ AddOutputFilterByType DEFLATE application/xml
+ AddOutputFilterByType DEFLATE application/xhtml+xml
+ AddOutputFilterByType DEFLATE application/rss+xml
+ AddOutputFilterByType DEFLATE application/atom_xml
+ AddOutputFilterByType DEFLATE application/javascript
+ AddOutputFilterByType DEFLATE application/x-javascript
+ AddOutputFilterByType DEFLATE application/x-shockwave-flash
+</IfModule>
+
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteBase /
+
+ # forbid double slashes in all URLs
+  RewriteCond %{THE_REQUEST} ^[A-Z]+\ /(([^/\ ]+/)*)/+([^\ ]*)
+  RewriteRule ^ /%1%3 [L,R=301]
+</IfModule>
+
+# compress
+<IfModule mod_deflate.c>
+ <FilesMatch "\.(js|jpg|jpeg|gif|png|css|txt|html)$">
+  ExpiresActive on
+  ExpiresDefault "access plus 1 month"
+  SetOutputFilter DEFLATE
+ </FilesMatch>
+</IfModule>
+
+<IfModule mod_gzip.c>
+ mod_gzip_on       Yes
+ mod_gzip_dechunk  Yes
+ mod_gzip_item_include file      \.(html?|txt|css|js|php|pl)$
+ mod_gzip_item_include handler   ^cgi-script$
+ mod_gzip_item_include mime      ^text/.*
+ mod_gzip_item_include mime      ^application/x-javascript.*
+ mod_gzip_item_exclude mime      ^image/.*
+ mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+# cache
+<IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresByType text/css "access plus 1 month"
+ ExpiresByType text/javascript "access plus 1 month"
+ ExpiresByType text/html "access plus 1 month"
+ ExpiresByType application/javascript "access plus 1 month"
+ ExpiresByType application/x-javascript "access plus 1 month"
+ ExpiresByType application/xhtml-xml "access plus 600 seconds"
+ ExpiresByType image/gif "access plus 1 week"
+ ExpiresByType image/jpeg "access plus 1 week"
+ ExpiresByType image/png "access plus 1 week"
+ ExpiresByType image/x-icon "access plus 1 month"
+</IfModule>
+
+<ifmodule mod_headers.c>
+ <filesmatch "\\.(ico|jpe?g|png|gif|swf)$">
+  Header set Cache-Control "max-age=2592000, public"
+ </filesmatch>
+ <filesmatch "\\.(css)$">
+  Header set Cache-Control "max-age=604800, public"
+ </filesmatch>
+ <filesmatch "\\.(js)$">
+  Header set Cache-Control "max-age=216000, private"
+ </filesmatch>
+ <filesmatch "\\.(x?html?|php)$">
+  Header set Cache-Control "max-age=600, private, must-revalidate"
+ </filesmatch>
+</ifmodule>
+
+# Turn ETags Off
+<ifmodule mod_headers.c>
+ Header unset ETag
+ Header unset Last-Modified
+</ifmodule>
+FileETag None
+
+# www2nowww
+<Ifmodule mod_rewrite.c>
+ RewriteCond %{HTTP_HOST} ^([^.]+)\.example\.com$ [NC]
+ RewriteRule ^(.*)$ http://example.com/$1 [R=301,L]
+</Ifmodule>
+
+# REDIRECT Favicon
+<Ifmodule mod_rewrite.c>
+ RewriteCond %{THE_REQUEST} ^([^.]+)\favicon.ico [NC]
+ RewriteRule ^(.*)$ http://example.com/favicon.ico [R=301,L] 
+</Ifmodule>
+
+# Add trailing slash 
+<Ifmodule mod_rewrite.c>
+ RewriteCond %{REQUEST_URI} ^/[^\.]+[^/]$
+ RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule . /index.php [L]
+</IfModule>
+
+# You should disable Indexes and MultiViews either here or in the
+# global config. Symlinks maybe needed for URL rewriting.
+Options -Indexes -MultiViews +FollowSymLinks
+
+# PROTECT all htaccess files
+<Files ~ "^[\._]ht">
+ Order allow,deny
+ Deny from all
+ Satisfy All
+</Files>
+
+# PROTECT wp-config.php
+<files wp-config.php>
+ Order deny,allow
+ deny from all
+</files>
+
+# PROTECT readme.html
+<files readme.html>
+ Order deny,allow
+ deny from all
+</files>
+
+# PROTECT wp-login.php
+<files wp-login.php>
+ AuthName "Admin-Bereich"
+ AuthType Basic
+ AuthUserFile /www/htdocs/w0012345/.htpasswd
+ require valid-user
+</files>
+
+# PROTECT install.php
+<Files install.php>
+ Order Allow,Deny
+ Deny from all
+ Satisfy all
+</Files>
+
+# STOP Spammer
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteCond %{REQUEST_METHOD} POST
+ RewriteCond %{REQUEST_URI} .wp-comments-post\.php*
+ RewriteCond %{HTTP_REFERER} !.*example.com.* [OR]
+ RewriteCond %{HTTP_USER_AGENT} ^$
+ RewriteRule (.*) ^http://%{REMOTE_ADDR}/$ [R=301,L]
+</IfModule>
+
+# Bot Blocker
+<IfModule mod_setenvif.c>
+ SetEnvIfNoCase User-Agent ^$ keep_out
+ SetEnvIfNoCase User-Agent (pycurl|casper|cmsworldmap|diavol|dotbot) keep_out
+ SetEnvIfNoCase User-Agent (flicky|ia_archiver|jakarta|kmccrew) keep_out
+ SetEnvIfNoCase User-Agent (purebot|comodo|feedfinder|planetwork) keep_out
+ <Limit GET POST PUT>
+  Order Allow,Deny
+  Allow from all
+  Deny from env=keep_out
+ </Limit>
+</IfModule>
+
+# DISABLE HOTLINKING OF IMAGES WITH FORBIDDEN OR CUSTOM IMAGE OPTION
+<IfModule mod_rewrite.c>
+ RewriteEngine on
+ RewriteCond %{HTTP_REFERER} !^$
+ RewriteCond %{HTTP_REFERER} !^http://(www\.)?example.com/.*$ [NC]
+ # RewriteRule \.(gif|jpg)$ - [F]
+ RewriteRule \.(gif|jpg)$ http://www.example.com/stophotlinking.jpg [R,L]
+</IfModule>
+
+# LOG php errors
+ php_flag display_startup_errors off
+ php_flag display_errors off
+ php_flag html_errors off
+ php_flag  log_errors on
+ php_value error_log /www/htdocs/w0012345/logs/phperrors.log
+
+# Datei zum Regeln von IP-Bereichen
+ Order deny,allow
+ Allow from all
+ deny from 83.246.96.42
+ deny from 82.103.133.221
+ deny from 74.86.15.2
+ deny from 72.249.103.154

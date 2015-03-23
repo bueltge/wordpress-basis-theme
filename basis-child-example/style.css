@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/**
+ * @CSS child theme for wordpress-basis-theme; a example
+ * @version (1.0)
+ * @date (08.03.2010 17:48:00)
+ * @lastmodified (08.03.2010 17:48:05)
+ * @author (Frank Bueltge)
+ */
+
+/*
+Theme Name: Basis Child Example
+Theme URI: http://wpbasis.de/
+Description: Example child theme for WP Basis theme
+Author: Frank Bueltge
+Author URI: http://bueltge.de/
+Template: basis
+Version: 1.0
+Tags: basis, wpbasis
+
+*/
+
+/* Reset browser defaults */
+@import url('../basis/layout/css/reset/reset.css');
+
+/* Apply a basic layout */
+@import url('../basis/layout/css/style.css');
+
+/* Apply a example layout */
+@import url('../basis/layout/example/style.css');
+
+
+#content h2 a:link, #content h2 a:visited, #header h1 a:link, #header h1 a:visited {
+color: #cc0000;
+}
+
+#content h2 a:hover, #content h2 a:active, #header h1 a:hover, #header h1 a:active {
+color: #00bb00;
+}
+
+a:link, a:visited {
+font-weight: 400;
+color: #cc0000;
+text-decoration: underline;
+}
+
+a:hover, a:active {
+color: #00bb00;
+text-decoration: none;
+border: none;
+}
