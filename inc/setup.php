@@ -39,7 +39,7 @@ if ( ! isset( $content_width ) )
  * @version    2014-04-29
  * @author     Frank Bültge <frank@bueltge.de>
  */
-\add_action( 'after_setup_theme', '\Wp_Basis\Setup\setup' );
+\add_action( 'init', '\Wp_Basis\Setup\setup' );
 function setup() {
 	
 	/**
