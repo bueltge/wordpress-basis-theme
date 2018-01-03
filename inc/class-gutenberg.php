@@ -57,9 +57,9 @@ function enqueue_style() {
 
 	wp_register_style(
 		'wp_basis_gutenberg',
-		get_theme_file_uri( '/assets/css/gutenberg.css' ),
+		get_template_directory_uri() . '/assets/css/blocks.css',
 		false,
-		'1.0',
+		'2018-01-03',
 		'screen'
 	);
 	wp_enqueue_style( 'wp_basis_gutenberg' );
