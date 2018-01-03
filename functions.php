@@ -23,22 +23,22 @@
  * For more information on hooks, actions, and filters, see 
  * @link     http://codex.wordpress.org/Plugin_API.
  *
- * Php Version 5.3
+ * Php Version 5.6
  *
  * @package    WordPress
  * @subpackage WordPress_Basis_Theme
  * @since      2012-05-08  0.0.1
- * @version    2014-11-03
+ * @version    2018-01-03
  * @author     Frank Bültge <frank@bueltge.de>
  * @license    http://opensource.org/licenses/gpl-license.php GNU Public License
  */
 
 // check for right php version
-$correct_php_version = version_compare( phpversion(), '5.3.0', '>=' );
+$correct_php_version = PHP_VERSION_ID >= 50600;
 
 if ( ! $correct_php_version ) {
-	echo 'The WP Basis Theme requires <strong>PHP 5.3</strong> or higher.<br>';
-	echo 'You are running PHP ' . phpversion();
+	echo 'The WP Basis Theme requires <strong>PHP 5.6</strong> or higher.<br>';
+	echo 'You are running PHP ' . PHP_VERSION;
 	exit;
 }
 
@@ -56,7 +56,7 @@ if ( ! function_exists( 'wp_basis_load_files' ) ) {
 	function wp_basis_load_files() {
 		
 		$inc_directory = 'inc';
-		$inc_base = dirname( __FILE__ ) . '/' . $inc_directory . '/';
+		$inc_base = __DIR__ . DIRECTORY_SEPARATOR . $inc_directory . DIRECTORY_SEPARATOR;
 		$includes = array();
 		
 		// load required classes
@@ -73,8 +73,10 @@ if ( ! function_exists( 'wp_basis_load_files' ) ) {
 			$includes
 		);
 		
-		foreach ( $includes as $key => $path )
+		foreach ( $includes as $key => $path ) {
+			/** @noinspection PhpIncludeInspection */
 			require_once $path;
+		}
 		
 	}
 }

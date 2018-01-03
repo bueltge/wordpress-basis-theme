@@ -18,8 +18,8 @@ See the repository for a [starter kit](https://github.com/bueltge/wordpress-basi
 
 ## Installation
 ### Requirements
-* WordPress (also Multisite) version 3.3 and later (tested at 3.4)
-* PHP 5.3 (use PHP namespaces)
+* WordPress (also Multisite) version 3.3 and later
+* PHP 5.6 (use PHP namespaces)
 
 ### Composer Usage
 #### What is Composer?
