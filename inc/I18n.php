@@ -31,9 +31,9 @@ class I18n {
 		// folder for language files
 		$this->language_folder = 'languages';
 
-		// Const for translation
-		if ( ! defined( 'wp_basis' ) ) {
-			define( 'wp_basis', $this->get_text_domain() );
+		// Constant for translation.
+		if ( ! defined( 'WP_BASIS' ) ) {
+			define( 'WP_BASIS', $this->get_text_domain() );
 		}
 
 		$this->load_textdomain();
@@ -50,7 +50,7 @@ class I18n {
 	public function load_textdomain() {
 
 		load_theme_textdomain(
-			$this->get_text_domain(),
+			$this->text_domain,
 			get_stylesheet_directory_uri() . DIRECTORY_SEPARATOR . $this->language_folder
 		);
 	}
