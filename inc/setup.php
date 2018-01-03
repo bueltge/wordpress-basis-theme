@@ -5,7 +5,7 @@
  * @package    WordPress
  * @subpackage WordPress_Basis_Theme
  * @since      2012-05-08  0.0.1
- * @version    2014-11-03
+ * @version    2018-01-03
  * @author     Frank Bültge <frank@bueltge.de>
  */
 
@@ -39,7 +39,7 @@ if ( ! isset( $content_width ) )
  * @version    2014-04-29
  * @author     Frank Bültge <frank@bueltge.de>
  */
-\add_action( 'init', '\Wp_Basis\Setup\setup' );
+\add_action( 'init', __NAMESPACE__ . '\\setup' );
 function setup() {
 	
 	/**
@@ -90,6 +90,7 @@ function scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/assets/css/style' . $suffix . '.css' );
 	
 	// load comment reply script, if comments open, if thread comments are active and also on single view
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
 }

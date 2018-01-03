@@ -17,7 +17,6 @@
  * @version    2012-05-08
  * @author     Frank Bültge <frank@bueltge.de>
  */
-
 namespace Wp_Basis\Core;
 
 class Core {

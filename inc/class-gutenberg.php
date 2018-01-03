@@ -18,7 +18,7 @@
  */
 namespace Wp_Basis\Gutenberg;
 
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\init_gutenberg' );
+\add_action( 'after_setup_theme', __NAMESPACE__ . '\\init_gutenberg' );
 /**
  * Initialize the support for Gutenberg.
  */
@@ -49,15 +49,18 @@ function init_gutenberg() {
 	);
 }
 
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_style' );
+\add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_style' );
 /**
  * Register and Enqueue the CSS stylesheet for Gutenberg blocks.
  */
 function enqueue_style() {
 
+	// set suffix for debug mode
+	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
 	wp_register_style(
 		'wp_basis_gutenberg',
-		get_template_directory_uri() . '/assets/css/blocks.css',
+		get_template_directory_uri() . '/assets/css/blocks' . $suffix . '.css',
 		false,
 		'2018-01-03',
 		'screen'

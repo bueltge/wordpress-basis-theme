@@ -6,8 +6,10 @@
  * are used in the theme as custom template tags. Others are attached to action and
  * filter hooks in WordPress to change core functionality.
  *
- * The first function, wp_basis_setup(), sets up the theme by registering support
+ * The file setup.php, sets up the theme by registering support
  * for various features in WordPress, such as a custom background and a navigation menu.
+ * This file here load all files from the directory inc automatically and you should include, set
+ * up there functions in the setup.php.
  * 
  * When using a child theme
  * @link    http://codex.wordpress.org/Theme_Development
@@ -63,7 +65,7 @@ if ( ! function_exists( 'wp_basis_load_files' ) ) {
 		foreach( glob( $inc_base . '*.php' ) as $path ) {
 			
 			$key = substr( $path, strpos( $path, $inc_directory ) );
-			$key = str_replace( $inc_directory . '/', '', $key );
+			$key = str_replace( $inc_directory . DIRECTORY_SEPARATOR, '', $key );
 			// create array with key and path for use in hook
 			$includes[ $key ] = $path;
 		}
