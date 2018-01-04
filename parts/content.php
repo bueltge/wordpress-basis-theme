@@ -36,7 +36,7 @@
 			wp_link_pages(
 				array(
 					'before' => '<nav class="page-link">' . __( '<span>Pages:</span>', 'wp_basis' ),
-					'after' => '</nav>'
+					'after' => '</nav>',
 				)
 			);
 			
