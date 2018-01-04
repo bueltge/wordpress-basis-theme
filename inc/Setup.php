@@ -20,6 +20,8 @@
 namespace Wp_Basis\Setup;
 
 use Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding;
+use Wp_Basis\Core\Core;
+use Wp_Basis\Gutenberg\Gutenberg;
 use Wp_Basis\I18n\I18n;
 
 /**
@@ -46,24 +48,37 @@ if ( ! isset( $content_width ) ) {
  */
 add_action( 'init', __NAMESPACE__ . '\\setup' );
 function setup() {
-	
+
+	/**
+	 * Set the prefix for each usage.
+	 * Use the core class for all primary settings about the theme functions.
+	 */
+	$core = new Core( 'wp_basis2' );
+
 	/**
 	 * Make the theme available for translation.
 	 * Translations can be added to the /languages/ directory.
-	 * If you're building a theme based on Twenty Twelve, use a find and replace
-	 * to change 'wp_basis' to the name of your theme in all the template files.
+	 * If you're building a theme then set the text domain string like the prefix.
+	 * The php classes will use the prefix variable from Core class, see above.
 	 */
-	new I18n();
-	
+	new I18n( $core->get_prefix() );
+
 	/**
-	 * Allow to easily brand the WordPress login and admin screens
+	 * Allow to easily brand the WordPress login and admin screens.
 	 */
 	require_once __DIR__ . '/admin/class-branding.php';
 	new Wp_Basis_Admin_Branding();
-	
+
 	/**
-	 * Custom functions for comments
-	 * See the documentation inside the file for more information and possibilities
+	 * Support the Gutenberg editor.
+	 *
+	 * @link  https://wordpress.org/gutenberg/handbook/
+	 */
+	new Gutenberg( $core->get_prefix() );
+
+	/**
+	 * Custom functions for comments.
+	 * See the documentation inside the file for more information and possibilities.
 	 */
 	require_once __DIR__ . '/comments/comment.php';
 

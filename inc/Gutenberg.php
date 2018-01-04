@@ -18,52 +18,79 @@
  */
 namespace Wp_Basis\Gutenberg;
 
-add_action( 'after_setup_theme', __NAMESPACE__ . '\\init_gutenberg' );
-/**
- * Initialize the support for Gutenberg.
- */
-function init_gutenberg() {
+class Gutenberg {
+
+	private $prefix;
 
 	/**
-	 * Add support for the Gutenberg Editor.
+	 * Gutenberg constructor.
 	 *
-	 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+	 * @param string|null $prefix
 	 */
-	add_theme_support(
-		'gutenberg',
-		array(
-			// Full width images and other content such as videos.
-			// Set to false if the theme should not support them.
-			'wide-images' => true,
-			// Define custom colours for use in the editor.
-			// A nice way to provide consistency in user editable content.
-			'colors' => array(
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-				'#ffffff',
-			),
-		)
-	);
-}
+	public function __construct( $prefix = null ) {
 
-add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_style' );
-/**
- * Register and Enqueue the CSS stylesheet for Gutenberg blocks.
- */
-function enqueue_style() {
+		$this->prefix = $prefix;
+		$this->init();
+	}
 
-	// set suffix for debug mode
-	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	/**
+	 * Include our functions in the WP stack.
+	 */
+	public function init() {
 
-	wp_register_style(
-		'wp_basis_gutenberg',
-		\get_template_directory_uri() . '/assets/css/blocks' . $suffix . '.css',
-		false,
-		'2018-01-03',
-		'screen'
-	);
-	wp_enqueue_style( 'wp_basis_gutenberg' );
+		add_action( 'after_setup_theme', __NAMESPACE__ . '\\init_gutenberg' );
+		add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_style' );
+	}
+
+	/**
+	 * Initialize the theme support for Gutenberg.
+	 */
+	public function init_gutenberg() {
+
+		/**
+		 * Add support for the Gutenberg Editor.
+		 *
+		 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+		 */
+		add_theme_support(
+			'gutenberg',
+			array(
+				// Full width images and other content such as videos.
+				// Set to false if the theme should not support them.
+				'wide-images' => true,
+				// Define custom colours for use in the editor.
+				// A nice way to provide consistency in user editable content.
+				'colors'      => array(
+					'#ffffff',
+					'#ffffff',
+					'#ffffff',
+					'#ffffff',
+					'#ffffff',
+					'#ffffff',
+				),
+			)
+		);
+	}
+
+
+	/**
+	 * Register and Enqueue the CSS stylesheet for Gutenberg Editor.
+	 *
+	 * @link  https://wordpress.org/gutenberg/handbook/blocks/applying-styles-with-stylesheets/
+	 */
+	public function enqueue_style() {
+
+		// set suffix for debug mode
+		$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
+		wp_register_style(
+			 $this->prefix . '_gutenberg',
+			\get_template_directory_uri() . '/assets/css/gutenberg_editor' . $suffix . '.css',
+			false,
+			'2018-01-03',
+			'screen'
+		);
+		wp_enqueue_style( 'wp_basis_gutenberg' );
+	}
+
 }

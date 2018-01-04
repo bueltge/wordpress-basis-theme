@@ -5,7 +5,7 @@
  * @package    WordPress
  * @subpackage WordPress_Basis_Theme
  * @since      2012-05-08  0.0.1
- * @version    2012-05-08
+ * @version    2018-01-04
  * @author     Frank Bültge <frank@bueltge.de>
  */
 
@@ -21,16 +21,33 @@ namespace Wp_Basis\Core;
 
 class Core {
 
-	public $default_args = array(
-		'wp_update_themes' => true
-	);
+	private $wp_update_themes;
+	private $prefix;
 
-	public function init( $args = false ) {
+	public function __construct( $prefix = null ) {
+
+		$this->prefix = $prefix;
+		$this->wp_update_themes = true;
+
+		$this->init();
+	}
+
+	public function init() {
 
 		// Prevent automatic updates
-		if ( $args[ 'wp_update_themes' ] ) {
+		if ( $this->wp_update_themes ) {
 			wp_clear_scheduled_hook( 'wp_update_themes' );
 		}
+	}
+
+	/**
+	 * Return the prefix for usage on hooks, domain, text domain.
+	 *
+	 * @return string
+	 */
+	public function get_prefix() {
+
+		return $this->prefix;
 	}
 
 } // end class
