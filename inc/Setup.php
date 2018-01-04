@@ -58,14 +58,14 @@ function setup() {
 	/**
 	 * Allow to easily brand the WordPress login and admin screens
 	 */
-	require_once 'admin/class-branding.php';
+	require_once __DIR__ . 'admin/class-branding.php';
 	new Wp_Basis_Admin_Branding();
 	
 	/**
 	 * Custom functions for comments
 	 * See the documentation inside the file for more information and possibilities
 	 */
-	require_once 'comments/comment.php';
+	require_once __DIR__ . 'comments/comment.php';
 
 	/**
 	 * Let WordPress manage the document title.
