@@ -25,17 +25,6 @@ use Wp_Basis\Gutenberg\Gutenberg;
 use Wp_Basis\I18n\I18n;
 
 /**
- * Set the content width in pixels based on the theme's design and stylesheet.
- * Also the width of oEmbed objects to scale specific size
- *
- * @since    2012-05-08  0.0.1
- */
-if ( ! isset( $content_width ) ) {
-	/** @noinspection PhpUnusedLocalVariableInspection */
-	$content_width = 640;
-} /* pixels */
-
-/**
  * Sets up theme defaults and registers support for various WordPress features.
  *
  * Note that this function is hooked into the after_setup_theme hook, which runs
@@ -48,6 +37,14 @@ if ( ! isset( $content_width ) ) {
  */
 add_action( 'init', __NAMESPACE__ . '\\setup' );
 function setup() {
+
+	/**
+	 * Set the content width in pixels based on the theme's design and stylesheet.
+	 * Also the width of oEmbed objects to scale specific size
+	 *
+	 * @since    2012-05-08  0.0.1
+	 */
+	$GLOBALS['content_width'] = 640; /* pixels */
 
 	/**
 	 * Set the prefix for each usage.
@@ -98,8 +95,30 @@ function setup() {
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
+
+	/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
 }
 
+/**
+ * Makes widget-ready.
+ */
+require_once __DIR__ . '/../widgets/Widgets_Init.php';
+
+/**
+ * Enqueue Scripts and Style.
+ *
+ * @ToDo we should switch this in separately class.
+ */
 add_action( 'wp_enqueue_scripts', '\Wp_Basis\Setup\scripts' );
 function scripts() {
 	
