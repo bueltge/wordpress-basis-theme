@@ -1,17 +1,18 @@
 # WordPress Basis Theme
-Basis provides a highly customizable starting point for your theme development.
+Basis provides a starting point for your theme development.
 
 ## Description
-Basis has been built to make theme development for WordPress easier. If you are an experienced theme developer or a total beginner, Basis provides a highly customizable starting point for your theme development and give your the typically development with WordPress by use Hooks. Basis comes with a pre-defined set of templates, no styles or style-framework for pure development. The theme is widget-ready and introduces a number of custom functions.
+Basis has been built to make theme development for WordPress easier. If you are an experienced theme developer or a total beginner, Basis provides a starting point for your theme development and give your the typically development with WordPress by use Hooks. Basis comes with a pre-defined set of templates, no styles or style-framework for pure development. The goal is an starter, not a framework that represent a lot of functions. So it is not necessary to remove topics. Start clean with only what you need with focus to the goal.
 
-Basis has an long tradition, development and maintenance since 2007 - see on the [project page](http://wpbasis.de).
+Basis has an long tradition, development and maintenance since 2007.
 The new version with the codename `namespace` ;) is usable, but changed in the course of time.
 
-* The plugin have a lot of hooks, always started with `wp_basis_`
+* The plugin use hooks, always started with a prefix, set via `Core` class, on default `wp_basis` inside the `Setup` class.
   * also the next string is the string of the template `wp_basis_single_`
   * the next string on the hook logic is 'before' or 'after' an element in the markup, sometimes 'content' - `wp_basis_single_before_content`
-* the `functions.php` is current only for check the functions, include a minimum from the often used defaults;
+* the `functions.php` is current only for loading all files inside the `inc` directory;
   * older solutions do you find in the `classes-old` in branch `stacker`
+* The theme supports on default the ['Gutenberg'](https://wordpress.org/gutenberg/handbook/) Editor in a minimal focus, loading a style for the editor and theme support with custom collers, see the class `Gutenberg`.
 
 ## Child Theme Usage
 See the repository for a [starter kit](https://github.com/bueltge/wordpress-basis-theme-Child-Starter), a example.
@@ -59,7 +60,7 @@ Grunt will watch all JavaScript and CSS files within the `assets` folder. If a f
 Good news, this theme is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog.
 
 ### Contact & Feedback
-The theme base is designed and developed current by me ([Frank Bültge](http://bueltge.de)).
+The theme base is designed and developed current by me ([Frank Bültge](https://bueltge.de)).
 
 Please let me know if you like the theme or you hate it or whatever ... Please fork it, add an issue for ideas and bugs.
 
