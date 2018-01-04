@@ -6,10 +6,10 @@
  * are used in the theme as custom template tags. Others are attached to action and
  * filter hooks in WordPress to change core functionality.
  *
- * The file setup.php, sets up the theme by registering support
+ * The file Setup.php, sets up the theme by registering support
  * for various features in WordPress, such as a custom background and a navigation menu.
  * This file here load all files from the directory inc automatically and you should include, set
- * up there functions in the setup.php.
+ * up there functions in the Setup.php.
  *
  * When using a child theme
  * @link       http://codex.wordpress.org/Theme_Development
