@@ -10,9 +10,9 @@
  */
 
 /**
- * Set namespace to encapsulating items
- * @link       http://www.php.net/manual/en/language.namespaces.rationale.php
+ * Set namespace to encapsulating items.
  *
+ * @link       http://www.php.net/manual/en/language.namespaces.rationale.php
  * @since      2012-05-08  0.0.1
  * @version    2012-05-08
  * @author     Frank Bültge <frank@bueltge.de>

@@ -1,17 +1,17 @@
 <?php
 /**
  * Init wor Widgetized area.
- * 
+ *
  * @package  WP Basis
  * @since    06/05/2012  0.0.1
  * @version  06/05/2012
- * @author     Frank Bültge <frank@bueltge.de>
+ * @author   Frank Bültge <frank@bueltge.de>
  */
 
 /**
- * Set namespace to encapsulating items
+ * Set namespace to encapsulating items.
+ *
  * @link     http://www.php.net/manual/en/language.namespaces.rationale.php
- * 
  * @since    06/05/2012  0.0.1
  * @version  06/05/2012
  * @author   Frank Bültge <frank@bueltge.de>
@@ -21,6 +21,7 @@ namespace Wp_Basis\Widgets_Init;
 // Add theme support for selective refresh for widgets.
 add_theme_support( 'customize-selective-refresh-widgets' );
 
+add_action( 'widgets_init', __NAMESPACE__ . '\\widgets_init' );
 /**
  * Register widgetized area and update sidebar with default widgets
  *
@@ -29,7 +30,6 @@ add_theme_support( 'customize-selective-refresh-widgets' );
  * @author   Frank Bültge <frank@bueltge.de>
  * @link     https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-add_action( 'widgets_init', __NAMESPACE__ . '\\widgets_init' );
 function widgets_init() {
 
 	register_sidebar( array(
