@@ -38,8 +38,8 @@ class Gutenberg {
 	 */
 	public function init() {
 
-		add_action( 'after_setup_theme', __NAMESPACE__ . '\\init_gutenberg' );
-		add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_style' );
+		add_action( 'after_setup_theme', [ $this, 'init_gutenberg' ] );
+		add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_style' ] );
 	}
 
 	/**
@@ -90,7 +90,7 @@ class Gutenberg {
 			'2018-01-03',
 			'screen'
 		);
-		wp_enqueue_style( 'wp_basis_gutenberg' );
+		wp_enqueue_style( $this->prefix . '_gutenberg' );
 	}
 
 }
