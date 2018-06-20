@@ -127,7 +127,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\scripts' );
 /**
  * Enqueue Scripts and Style.
  *
- * @ToDo we should switch this in separately class.
+ * @ToDo we should switch this in separately class, file.
  */
 function scripts() {
 
