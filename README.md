@@ -12,7 +12,7 @@ The new version with the codename `namespace` ;) is usable, but changed in the c
   * the next string on the hook logic is 'before' or 'after' an element in the markup, sometimes 'content' - `wp_basis_single_before_content`
 * the `functions.php` is current only for loading all files inside the `inc` directory;
   * older solutions do you find in the `classes-old` in branch `stacker`
-* The theme suports [OpenSearch](http://www.opensearch.org/Specifications/OpenSearch) so that you should change, customize the `os.xml` file
+* The theme supports [OpenSearch](http://www.opensearch.org/Specifications/OpenSearch) so that you should change, customize the `os.xml` file
 * The theme supports on default the ['Gutenberg'](https://wordpress.org/gutenberg/handbook/) Editor in a minimal focus, loading a style for the editor and theme support with custom collers, see the class `Gutenberg`.
 
 ## Child Theme Usage
