@@ -26,6 +26,11 @@ class Core {
 
 	public function __construct( $prefix = null ) {
 
+		// Fallback for empty parameter.
+		if ( null === $prefix ) {
+			$prefix = 'wp_basis';
+		}
+
 		$this->prefix = $prefix;
 		$this->wp_update_themes = true;
 

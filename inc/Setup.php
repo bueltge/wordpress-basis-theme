@@ -5,7 +5,7 @@
  * @package    WordPress
  * @subpackage WordPress_Basis_Theme
  * @since      2012-05-08  0.0.1
- * @version    2018-01-03
+ * @version    2018-06-20
  * @author     Frank Bültge <frank@bueltge.de>
  */
 
@@ -17,7 +17,6 @@
  * @version    2012-05-08
  * @author     Frank Bültge <frank@bueltge.de>
  */
-
 namespace Wp_Basis\Setup;
 
 use Wp_Basis\Admin_Branding\Wp_Basis_Admin_Branding;

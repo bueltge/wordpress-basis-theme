@@ -30,6 +30,7 @@ class I18n {
 		if ( null === $prefix ) {
 			$prefix = 'wp_basis';
 		}
+
 		// string for i18n of theme
 		$this->text_domain = $prefix;
 		// folder for language files
