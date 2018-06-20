@@ -39,14 +39,6 @@ add_action( 'init', __NAMESPACE__ . '\\setup' );
 function setup() {
 
 	/**
-	 * Set the content width in pixels based on the theme's design and stylesheet.
-	 * Also the width of oEmbed objects to scale specific size
-	 *
-	 * @since    2012-05-08  0.0.1
-	 */
-	$GLOBALS[ 'content_width' ] = 640; /* pixels */
-
-	/**
 	 * Set the prefix for each usage.
 	 * Use the core class for all primary settings about the theme functions.
 	 */
@@ -114,8 +106,22 @@ function setup() {
  */
 require_once __DIR__ . '/../widgets/Widgets_Init.php';
 
-add_action( 'template_redirect', __NAMESPACE__ . '\\contentWidth' );
-function contentWidth() {}
+add_action( 'template_redirect', __NAMESPACE__ . '\\content_width' );
+/**
+ * Set the content width in pixels based on the theme's design and stylesheet.
+ * Also the width of oEmbed objects to scale specific size
+ *
+ * @since    2012-05-08  0.0.1
+ * @version  2018-06-20
+ */
+function content_width() {
+
+	$content_width = isset( $GLOBALS['content_width'] )
+		? (int) $GLOBALS['content_width']
+		: 720;
+
+	$GLOBALS['content_width'] = $content_width;
+}
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\scripts' );
 /**
