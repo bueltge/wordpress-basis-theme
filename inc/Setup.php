@@ -50,7 +50,7 @@ function setup() {
 	 * Set the prefix for each usage.
 	 * Use the core class for all primary settings about the theme functions.
 	 */
-	$core = new Core( 'wp_basis2' );
+	$core = new Core( 'wp_basis' );
 
 	/**
 	 * Make the theme available for translation.
@@ -113,6 +113,9 @@ function setup() {
  * Makes widget-ready.
  */
 require_once __DIR__ . '/../widgets/Widgets_Init.php';
+
+add_action( 'template_redirect', __NAMESPACE__ . '\\contentWidth' );
+function contentWidth() {}
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\scripts' );
 /**
