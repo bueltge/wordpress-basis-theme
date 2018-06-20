@@ -1,12 +1,29 @@
 <?xml version="1.0"?>
-<ruleset name="marksimple">
- <description>Rules for WordPress Admin Style PHP projects</description>
+<ruleset name="wp_basis">
+ <description>Rules for WordPress Basis Theme projects</description>
 
- <file>./inc</file>
- <file>./WpAdminStyle.php</file>
+ <!-- Check up to 8 files simultanously. -->
+ <arg name="parallel" value="8"/>
+
+ <!-- Only check the PHP, CSS and SCSS files. JS files are checked separately with ESLint. -->
+ <arg name="extensions" value="php,css,scss/css"/>
+
+ <!-- Check all files in this directory and the directories below it. -->
+ <file>./inc/</file>
+ <file>./parts/</file>
+ <file>./widgets/</file>
+ <file>./</file>
 
  <!-- Code Reviews Rules -->
  <rule ref="WordPress"/>
+
+ <!-- Verify that the text_domain is set to the desired text-domain.
+      Multiple valid text domains can be provided as a comma-delimited list. -->
+ <rule ref="WordPress.WP.I18n">
+  <properties>
+   <property name="text_domain" type="array" value="wp_basis"/>
+  </properties>
+ </rule>
 
 </ruleset>
 
