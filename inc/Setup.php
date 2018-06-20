@@ -106,7 +106,7 @@ function setup() {
  */
 require_once __DIR__ . '/../widgets/Widgets_Init.php';
 
-add_action( 'template_redirect', __NAMESPACE__ . '\\content_width' );
+add_action( 'template_redirect', __NAMESPACE__ . '\\content_width', 0 );
 /**
  * Set the content width in pixels based on the theme's design and stylesheet.
  * Also the width of oEmbed objects to scale specific size
