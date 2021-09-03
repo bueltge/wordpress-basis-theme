@@ -35,6 +35,6 @@
 	"analyze": [
 	  "phpmd --suffixes php --exclude vendor/,node_modules/,mysql/ ./ ansi phpmd.xml",
 	  "phan --output-mode text --no-progress-bar --color --allow-polyfill-parser"
-	],
-  },
+	]
+  }
 }
