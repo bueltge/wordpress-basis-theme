@@ -20,9 +20,18 @@
     "php": ">=5.6"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.2",
-    "wp-coding-standards/wpcs": "^0.14.1",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
-    "dg/composer-cleaner": "^1.1"
+	"phpmd/phpmd": "~2.10",
+	"phan/phan": "~4.0",
+	"squizlabs/php_codesniffer": "~3.6",
+	"wp-coding-standards/wpcs": "~2.3",
+	"dealerdirect/phpcodesniffer-composer-installer": "~0.7",
   }
+  "minimum-stability": "stable",
+  "scripts": {
+	"lint": "phpcs -p --standard=WordPress src/ $(ls *.php)",
+	"analyze": [
+	  "phpmd --suffixes php --exclude vendor/,node_modules/,mysql/ ./ ansi phpmd.xml",
+	  "phan --output-mode text --no-progress-bar --color --allow-polyfill-parser"
+	],
+  },
 }
